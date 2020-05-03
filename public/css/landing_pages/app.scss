@@ -2,7 +2,7 @@
 $gray       : #707070;
 $lightgray  : #f4f4fa;
 $darkblue   : #145a7e;
-$lightblue  : rgb(133, 147, 150);
+$lightblue  : #22D1EE;
 $darkfont   : #2C2C2C;
 
 // Fonts
@@ -535,6 +535,10 @@ a{
 
     .float_right, .float_left{
         display: none;
+    }
+
+    #applause_button{
+        bottom: 10%;
     }
 
     .title{

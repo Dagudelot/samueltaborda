@@ -52,7 +52,7 @@ a {
 }
 
 .outline-button {
-  border: 1px #859396 solid;
+  border: 1px #22D1EE solid;
 }
 
 .title {
@@ -296,7 +296,7 @@ a {
 #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul li, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul li, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul li, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul li {
   padding: 0 .5em;
   margin: 0 .3em;
-  background: #859396;
+  background: #22D1EE;
   border-radius: 10px;
   color: #2C2C2C;
 }
@@ -411,7 +411,7 @@ a {
 .post .post_container .post_information .post_tags ul li {
   padding: 0 .5em;
   margin: .5em .3em;
-  background: #859396;
+  background: #22D1EE;
   border-radius: 5px;
   color: #fff;
 }
@@ -499,6 +499,9 @@ a {
   }
   .float_right, .float_left {
     display: none;
+  }
+  #applause_button {
+    bottom: 10%;
   }
   .title {
     font-size: 1.5em;
