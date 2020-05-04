@@ -38421,7 +38421,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "title" }, [
       _c("img", {
-        attrs: { src: "/icons/instagram.svg", alt: "instagram", width: "30" }
+        attrs: {
+          src: "/images/icons/instagram.svg",
+          alt: "instagram",
+          width: "30"
+        }
       }),
       _vm._v(" \n            Instagram\n        ")
     ])
@@ -38467,7 +38471,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_celebration_0jvk.svg",
+                  src: "/images/icons/undraw_celebration_0jvk.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38491,7 +38495,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_pure_love_ay8a.svg",
+                  src: "/images/icons/undraw_pure_love_ay8a.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38515,7 +38519,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_conference_speaker_6nt7.svg",
+                  src: "/images/icons/undraw_conference_speaker_6nt7.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38539,7 +38543,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_heartbroken_cble.svg",
+                  src: "/images/icons/undraw_heartbroken_cble.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38563,7 +38567,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_friendship_mni7.svg",
+                  src: "/images/icons/undraw_friendship_mni7.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38587,7 +38591,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_i_can_fly_7egl.svg",
+                  src: "/images/icons/undraw_i_can_fly_7egl.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38611,7 +38615,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_smiley_face_lmgm.svg",
+                  src: "/images/icons/undraw_smiley_face_lmgm.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38633,7 +38637,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_young_and_happy_hfpe.svg",
+                  src: "/images/icons/undraw_young_and_happy_hfpe.svg",
                   alt: "icon",
                   width: "100"
                 }
@@ -38655,7 +38659,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "icon" }, [
               _c("img", {
                 attrs: {
-                  src: "/icons/undraw_friendship_mni7.svg",
+                  src: "/images/icons/undraw_friendship_mni7.svg",
                   alt: "icon",
                   width: "100"
                 }

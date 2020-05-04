@@ -47,7 +47,7 @@
         <!-- Latest Posts (Instagram) Container -->
         <div class="contenedor section" id="instagram_posts_section">
             <div class="title">
-                <img src="/icons/instagram.svg" alt="instagram" width="30"> 
+                <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
                 Instagram
             </div>
             <div class="description">
@@ -76,7 +76,7 @@
             <div id="services">
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_celebration_0jvk.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_celebration_0jvk.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Terapia Infantil y Juvenil
@@ -87,7 +87,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_pure_love_ay8a.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_pure_love_ay8a.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Terapia de Pareja
@@ -98,7 +98,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_conference_speaker_6nt7.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_conference_speaker_6nt7.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Charlas educativas
@@ -109,7 +109,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_heartbroken_cble.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_heartbroken_cble.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Orientación vocacional
@@ -120,7 +120,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Peritazgos jurídicos
@@ -131,7 +131,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_i_can_fly_7egl.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_i_can_fly_7egl.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Atención a Trastornos emocionales
@@ -142,7 +142,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_smiley_face_lmgm.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_smiley_face_lmgm.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Ansiedad
@@ -153,7 +153,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_young_and_happy_hfpe.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_young_and_happy_hfpe.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Depresión
@@ -164,7 +164,7 @@
                 </div>
                 <div class="service">
                     <div class="icon">
-                        <img src="/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
+                        <img src="/images/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
                     </div>
                     <div class="service_title">
                         Tratamiento en adicciones
