@@ -38856,7 +38856,11 @@ var render = function() {
                 { staticClass: "nav_item" },
                 [
                   _c("img", {
-                    attrs: { src: "/icons/me.svg", alt: "home", width: "20" }
+                    attrs: {
+                      src: "/images/icons/me.svg",
+                      alt: "home",
+                      width: "20"
+                    }
                   }),
                   _vm._v(" "),
                   _c(
@@ -38877,7 +38881,7 @@ var render = function() {
                 [
                   _c("img", {
                     attrs: {
-                      src: "/icons/contact.svg",
+                      src: "/images/icons/contact.svg",
                       alt: "home",
                       width: "20"
                     }
@@ -38900,7 +38904,11 @@ var render = function() {
                 { staticClass: "nav_item" },
                 [
                   _c("img", {
-                    attrs: { src: "/icons/blog.svg", alt: "home", width: "20" }
+                    attrs: {
+                      src: "/images/icons/blog.svg",
+                      alt: "home",
+                      width: "20"
+                    }
                   }),
                   _vm._v(" "),
                   _c(
@@ -38945,7 +38953,11 @@ var staticRenderFns = [
         _c("span", { staticClass: "tooltiptext" }, [_vm._v("@psicosamy")]),
         _vm._v(" "),
         _c("img", {
-          attrs: { src: "/icons/instagram.svg", alt: "instagram", width: "30" }
+          attrs: {
+            src: "/images/icons/instagram.svg",
+            alt: "instagram",
+            width: "30"
+          }
         })
       ]
     )
@@ -38967,7 +38979,11 @@ var staticRenderFns = [
         _c("span", { staticClass: "tooltiptext" }, [_vm._v("YouTube")]),
         _vm._v(" "),
         _c("img", {
-          attrs: { src: "/icons/youtube.svg", alt: "youtube", width: "30" }
+          attrs: {
+            src: "/images/icons/youtube.svg",
+            alt: "youtube",
+            width: "30"
+          }
         })
       ]
     )
@@ -39014,7 +39030,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("img", {
                 attrs: {
-                  src: "/icons/instagram.svg",
+                  src: "/images/icons/instagram.svg",
                   alt: "instagram",
                   width: "30"
                 }
@@ -39036,7 +39052,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("img", {
                 attrs: {
-                  src: "/icons/youtube.svg",
+                  src: "/images/icons/youtube.svg",
                   alt: "youtube",
                   width: "30"
                 }

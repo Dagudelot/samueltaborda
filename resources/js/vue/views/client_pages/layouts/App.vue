@@ -3,11 +3,11 @@
         <!-- Social Aside -->
         <a target="_blank" href="https://www.instagram.com/psicosamy/" class="tooltip float_left">
             <span class="tooltiptext">@psicosamy</span>
-            <img src="/icons/instagram.svg" alt="instagram" width="30"> 
+            <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
         </a>
         <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip float_right">
             <span class="tooltiptext">YouTube</span>
-            <img src="/icons/youtube.svg" alt="youtube" width="30">
+            <img src="/images/icons/youtube.svg" alt="youtube" width="30">
         </a>
         <!-- /Social Aside -->
 
@@ -19,15 +19,15 @@
                 </router-link>
                 <div id="nav">
                     <div class="nav_item">
-                        <img src="/icons/me.svg" alt="home" width="20">
+                        <img src="/images/icons/me.svg" alt="home" width="20">
                         <router-link :to="{ name : 'about' }" class="animated">Acerca de mí</router-link>
                     </div>
                     <div class="nav_item">
-                        <img src="/icons/contact.svg" alt="home" width="20">
+                        <img src="/images/icons/contact.svg" alt="home" width="20">
                         <router-link :to="{ name : 'contact' }" class="animated">Contacto</router-link>
                     </div>
                     <div class="nav_item">
-                        <img src="/icons/blog.svg" alt="home" width="20">
+                        <img src="/images/icons/blog.svg" alt="home" width="20">
                         <router-link :to="{ name : 'blog' }" class="button outline-button" id="blog_button">Blog</router-link>
                     </div>
                 </div>
@@ -51,11 +51,11 @@
                 <div id="social">
                     <a target="_blank" href="https://www.instagram.com/psicosamy/" class="tooltip">
                         <span class="tooltiptext">@psicosamy</span>
-                        <img src="/icons/instagram.svg" alt="instagram" width="30"> 
+                        <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
                     </a>
                     <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip">
                         <span class="tooltiptext">YouTube</span>
-                        <img src="/icons/youtube.svg" alt="youtube" width="30">
+                        <img src="/images/icons/youtube.svg" alt="youtube" width="30">
                     </a>
                 </div>
             </div>
