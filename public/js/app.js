@@ -38153,7 +38153,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: {
-          src: "/icons/undraw_towing_6yy4.svg",
+          src: "/images/icons/undraw_towing_6yy4.svg",
           alt: "site_under_construction",
           width: "200"
         }
