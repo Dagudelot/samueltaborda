@@ -1939,7 +1939,7 @@ __webpack_require__.r(__webpack_exports__);
     getPostTitle: function getPostTitle() {
       parts = '';
 
-      if (post.text != null) {
+      if (this.post.text != null) {
         var parts = this.post.text.split(' ');
         parts.shift();
       }

@@ -32,7 +32,7 @@
 
                 parts = '';
 
-                if( post.text != null ){
+                if( this.post.text != null ){
                     var parts = this.post.text.split(' ');
                     parts.shift();
                 }
