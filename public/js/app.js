@@ -55544,7 +55544,7 @@ var mixins = {
       if (posts && posts.length > 0) {
         // Filter posts with #psicosamy
         posts.filter(function (post) {
-          if (post.text) post.text.includes(tag);
+          if (post.text != null) post.text.includes(tag);
         }); // Limit number of posts
 
         filteredPosts = posts.slice(0, limit);
