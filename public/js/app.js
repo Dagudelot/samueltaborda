@@ -38068,7 +38068,11 @@ var render = function() {
             _c("li", [
               _vm._v(
                 "\n                    " +
-                  _vm._s(_vm.post.text.split(" ")[0]) +
+                  _vm._s(
+                    _vm.post.text != null
+                      ? _vm.post.text.split(" ")[0]
+                      : "#psicosamy"
+                  ) +
                   "\n                "
               )
             ])

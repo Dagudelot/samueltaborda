@@ -11,7 +11,7 @@
             <div class="post_card_tags">
                 <ul>
                     <li>
-                        {{ (post.text != null) ? post.text.split(' ')[0] : '' }}
+                        {{ (post.text != null) ? post.text.split(' ')[0] : '#psicosamy' }}
                     </li>
                 </ul>
             </div>
