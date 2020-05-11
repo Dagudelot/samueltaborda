@@ -1937,8 +1937,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {},
   computed: {
     getPostTitle: function getPostTitle() {
-      var parts = this.post.text.split(' ');
-      parts.shift(); //parts.shift(); // remove first word (tag, ej. #psicosamy)
+      parts = '';
+
+      if (post.text != null) {
+        var parts = this.post.text.split(' ');
+        parts.shift();
+      }
 
       return parts instanceof Array ? parts.join(' ') : parts;
     }
