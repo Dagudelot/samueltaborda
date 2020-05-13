@@ -30,6 +30,16 @@ var mixins = {
             var day = date.getDate();
 
             return `${month} ${day}, ${year}`;
+        },
+        convertPubishedAt( published_at ){
+
+            var year = published_at.substr(0, 4);
+            // Month
+            var month = this.months_arr[ parseInt( published_at.substr(5, 2) - 1 ) ];
+            // Day
+            var day = published_at.substr(8, 2);
+
+            return `${month} ${day}, ${year}`;
         }
     }
 }

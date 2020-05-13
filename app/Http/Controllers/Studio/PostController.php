@@ -46,7 +46,7 @@ class PostController extends BaseController
      */
     public function index(Request $request)
     {
-        $posts = Post::published()
+        $posts = Post::with([ 'tags', 'topic' ])->published()
                      ->withUserMeta()
                      ->orderByDesc('published_at')
                      ->get();

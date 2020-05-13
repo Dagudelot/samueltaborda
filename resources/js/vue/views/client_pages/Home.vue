@@ -27,13 +27,13 @@
                 &#128512; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam ea neque vel fuga earum obcaecati dignissimos quae. Qui iusto ratione facere hic iure quaerat ducimus perspiciatis porro corrupti odio.
             </div>
             <div class="overflow-x">
-                <router-link :to="{ name : 'post', params : { 'post_id' : 1 } }" id="latest_posts">
-                    <post-card 
+                <div id="latest_posts">
+                    <blog-post-card 
                     v-for="(post, index) of blog_posts"
                     :key="index"
                     :post="post"
-                    ></post-card>
-                </router-link>
+                    ></blog-post-card>
+                </div>
             </div>
 
             <router-link :to="{ name : 'blog' }">
@@ -55,11 +55,11 @@
             </div>
             <div class="overflow-x">
                 <div id="instagram_posts">
-                    <post-card 
+                    <instagram-post-card 
                     v-for="(post, index) of filteredInstagramPosts"
                     :key="index"
                     :post="post"
-                    ></post-card>
+                    ></instagram-post-card>
                 </div>
             </div>
         </div>
@@ -187,6 +187,7 @@
         mixins: [ mixins ],
         mounted(){
 
+            this.getBlogPosts();
             this.getInstagramPosts();
             
             setTimeout(() => {
@@ -203,6 +204,7 @@
             ...mapState( 'instagramStore', [ 'instagram_posts' ] )
         },
         methods: {
+            ...mapActions( 'blogStore', [ 'getBlogPosts' ] ),
             ...mapActions( 'instagramStore', [ 'getInstagramPosts' ] ),
         }
     }

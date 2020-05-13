@@ -5,8 +5,10 @@ import blogStore from './stores/blogStore';
 // Main Store
 const store = {
     state: {   
+        
     },
     mutations: {
+        
     },
     actions: {
     },

@@ -1,18 +1,22 @@
 export default {
     namespaced: true,
     state: {
-        instagram_posts : []
+        instagram_posts: []
     },
     getters: {
     },
     mutations: {
-        SET_INSTAGRAM_POSTS( state, instagram_posts ){
+        SET_INSTAGRAM_POSTS(state, instagram_posts) {
             state.instagram_posts = instagram_posts;
         }
     },
     actions: {
-        getInstagramPosts( state ){
+        getInstagramPosts( state ) {
 
+            var savedPosts = localStorage.getItem('instagramPosts');
+            state.commit('SET_INSTAGRAM_POSTS', JSON.parse(savedPosts));
+
+            /*
             fetch("https://instagram9.p.rapidapi.com/api/instagram?kullaniciadi=psicosamy&lang=en", {
                 "method": "GET",
                 "headers": {
@@ -29,6 +33,7 @@ export default {
                 var savedPosts = localStorage.getItem('instagramPosts');
                 state.commit('SET_INSTAGRAM_POSTS', JSON.parse( savedPosts ));
             });
+        */
 
         },
     }

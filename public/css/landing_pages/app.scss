@@ -356,7 +356,7 @@ a{
             text-align: center;
             color: #fff;
             z-index: 1;
-            top: 9em;
+            top: 6em;
         }
 
         img{
@@ -409,10 +409,13 @@ a{
             line-height: 1.6em;
             text-align: left;
             font-size: 16px;
-            padding: 0 10em;
+            padding: 0 8em;
             margin-left: 2em;
             font-family: 'Roboto-Light', sans-serif;
 
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -517,6 +520,18 @@ a{
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // aca
+    .post{
+
+        .post_container{
+
+            .post_content{
+                margin: 4em auto;
+                padding: 0 5em;
             }
         }
     }

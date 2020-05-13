@@ -8,14 +8,14 @@ import Vuex             from 'vuex';
 import VueRouter        from 'vue-router';
 import routes           from './vue/routes';
 import storeData        from './vue/store';
-//import '@mdi/font/css/materialdesignicons.css';
 
 // Vue Use
 Vue.use( VueRouter );
 Vue.use( Vuex );
 
 // Components
-Vue.component('post-card', require('./vue/components/PostCard.vue').default);
+Vue.component('blog-post-card', require('./vue/components/BlogPostCard.vue').default);
+Vue.component('instagram-post-card', require('./vue/components/InstagramPostCard.vue').default);
 Vue.component('under-construction', require('./vue/components/UnderConstruction.vue').default);
 Vue.component('related-post', require('./vue/components/RelatedPost.vue').default);
 
