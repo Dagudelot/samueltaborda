@@ -55847,7 +55847,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   actions: {
     getBlogPosts: function getBlogPosts(state) {
-      fetch("/studio/api/posts/", {
+      fetch("https://samueltaborda.com/studio/api/posts/", {
         "method": "GET"
       }).then(function (response) {
         if (response.ok) return response.json();
