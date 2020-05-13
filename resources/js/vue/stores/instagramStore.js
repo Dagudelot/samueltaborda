@@ -13,10 +13,6 @@ export default {
     actions: {
         getInstagramPosts( state ) {
 
-            var savedPosts = localStorage.getItem('instagramPosts');
-            state.commit('SET_INSTAGRAM_POSTS', JSON.parse(savedPosts));
-
-            /*
             fetch("https://instagram9.p.rapidapi.com/api/instagram?kullaniciadi=psicosamy&lang=en", {
                 "method": "GET",
                 "headers": {
@@ -33,8 +29,6 @@ export default {
                 var savedPosts = localStorage.getItem('instagramPosts');
                 state.commit('SET_INSTAGRAM_POSTS', JSON.parse( savedPosts ));
             });
-        */
-
         },
     }
 }
