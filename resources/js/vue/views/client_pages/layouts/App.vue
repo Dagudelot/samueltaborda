@@ -5,7 +5,7 @@
             <span class="tooltiptext">@psicosamy</span>
             <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
         </a>
-        <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip float_right">
+        <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip float_left">
             <span class="tooltiptext">YouTube</span>
             <img src="/images/icons/youtube.svg" alt="youtube" width="30">
         </a>

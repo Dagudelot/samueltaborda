@@ -109,6 +109,10 @@ a{
     .tooltiptext{
         visibility: visible;
     }
+
+    &:nth-of-type(2){
+        margin-top: 6em;
+    }
 }
 
 .float_right{

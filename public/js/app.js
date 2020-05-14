@@ -39026,7 +39026,7 @@ var staticRenderFns = [
     return _c(
       "a",
       {
-        staticClass: "tooltip float_right",
+        staticClass: "tooltip float_left",
         attrs: {
           target: "_blank",
           href: "https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg"
