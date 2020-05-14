@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://unpkg.com/applause-button/dist/applause-button.css">
     <script src="https://unpkg.com/applause-button/dist/applause-button.js"></script>
 </head>
-<body data-rsssl=1>
+<body>
 
     <div id="app">
         <app></app>
