@@ -176,6 +176,19 @@
             </div>
         </div>
         <!-- /Services -->
+
+        <!-- Map -->
+        <div class="contenedor section">
+            <div class="title">
+                <img src="/images/icons/map-marker.svg" alt="map-marker" width="30"> 
+                Ubicación
+            </div>
+            <div class="description">
+                Carrera 76 #49-11, Medellín, Colombia
+            </div>
+            <location></location>
+        </div>
+        <!-- Map -->
     </div>
 </template>
 

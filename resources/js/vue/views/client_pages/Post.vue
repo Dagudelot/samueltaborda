@@ -17,7 +17,7 @@
                     <div class="title">
                         Categoría:
                     </div>
-                    <span> {{ selected_post.topic[0].name }} </span>
+                    <span v-if="selected_post.topic.length > 0"> {{ selected_post.topic[0].name }} </span>
                     <div class="title">
                         Fecha de publicación:
                     </div>

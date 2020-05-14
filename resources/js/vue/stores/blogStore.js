@@ -21,7 +21,7 @@ export default {
     actions: {
         getBlogPosts( state ) {
 
-            fetch("https://samueltaborda.com/studio/api/posts/", {
+            fetch("/studio/api/posts/", {
                 "method": "GET"
             })
             .then(response => {
@@ -41,7 +41,7 @@ export default {
         },
         findPost( state, post_id ){
 
-            fetch("https://samueltaborda.com/studio/api/posts/" + post_id, {
+            fetch("/studio/api/posts/" + post_id, {
                 "method": "GET"
             })
             .then(response => {

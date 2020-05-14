@@ -39,6 +39,10 @@
         <router-view></router-view>
         <!-- Main Section -->
 
+        <div class="contenedor">
+            Íconos hechos por <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> de <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+        </div>
+
         <!-- Footer -->
         <div class="contenedor">
             <div class="fixed_bar" id="footer">

@@ -18,6 +18,7 @@ Vue.component('blog-post-card', require('./vue/components/BlogPostCard.vue').def
 Vue.component('instagram-post-card', require('./vue/components/InstagramPostCard.vue').default);
 Vue.component('under-construction', require('./vue/components/UnderConstruction.vue').default);
 Vue.component('related-post', require('./vue/components/RelatedPost.vue').default);
+Vue.component('location', require('./vue/components/Map.vue').default);
 
 Vue.component('app', require('./vue/views/client_pages/layouts/App.vue').default);
 
