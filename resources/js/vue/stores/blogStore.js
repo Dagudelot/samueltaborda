@@ -23,6 +23,9 @@ export default {
 
             fetch("/studio/api/posts/", {
                 "method": "GET"
+            },
+            {
+                mode: 'cors'
             })
             .then(response => {
                 if( response.ok ) return response.json()
@@ -43,6 +46,9 @@ export default {
 
             fetch("/studio/api/posts/" + post_id, {
                 "method": "GET"
+            },
+            {
+                mode: 'cors'
             })
             .then(response => {
                 if( response.ok ) return response.json()
