@@ -56018,8 +56018,6 @@ __webpack_require__.r(__webpack_exports__);
     getBlogPosts: function getBlogPosts(state) {
       fetch("/studio/api/posts/", {
         "method": "GET"
-      }, {
-        mode: 'cors'
       }).then(function (response) {
         if (response.ok) return response.json();
       }).then(function (res) {
@@ -56036,8 +56034,6 @@ __webpack_require__.r(__webpack_exports__);
     findPost: function findPost(state, post_id) {
       fetch("/studio/api/posts/" + post_id, {
         "method": "GET"
-      }, {
-        mode: 'cors'
       }).then(function (response) {
         if (response.ok) return response.json();
       }).then(function (res) {
