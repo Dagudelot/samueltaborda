@@ -20,15 +20,15 @@
 
         <!-- Latest Posts Container -->
         <div class="contenedor section" id="latest_posts_section">
-            <div class="title">
+            <div class="section_title">
                 Últimas publicaciones
             </div>
             <div class="description">
-                &#128512; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam ea neque vel fuga earum obcaecati dignissimos quae. Qui iusto ratione facere hic iure quaerat ducimus perspiciatis porro corrupti odio.
+                &#128512; En mi blog, estoy siempre activo publicando sobre diferentes temas de interés y actualidad. ¡Léelo!
             </div>
             <div class="overflow-x">
                 <div id="latest_posts">
-                    <blog-post-card 
+                    <blog-post-card
                     v-for="(post, index) of blog_posts"
                     :key="index"
                     :post="post"
@@ -46,8 +46,8 @@
 
         <!-- Latest Posts (Instagram) Container -->
         <div class="contenedor section" id="instagram_posts_section">
-            <div class="title">
-                <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
+            <div class="section_title">
+                <img src="/images/icons/instagram.svg" alt="instagram" width="30">
                 Instagram
             </div>
             <div class="description">
@@ -55,7 +55,7 @@
             </div>
             <div class="overflow-x">
                 <div id="instagram_posts">
-                    <instagram-post-card 
+                    <instagram-post-card
                     v-for="(post, index) of filteredInstagramPosts"
                     :key="index"
                     :post="post"
@@ -67,124 +67,33 @@
 
         <!-- Services -->
         <div class="section" id="services_section">
-            <div class="title">
+            <div class="section_title">
                 Servicios
             </div>
             <div class="description">
-                &#127992; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsam ea neque vel fuga earum obcaecati dignissimos quae. Qui iusto ratione facere hic iure quaerat ducimus perspiciatis porro corrupti odio.
+                &#127992; Lista de los servicios que presto. Dale click a uno de ellos si estás interesad@ en saber más
             </div>
             <div id="services">
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_celebration_0jvk.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Terapia Infantil y Juvenil
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_pure_love_ay8a.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Terapia de Pareja
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_conference_speaker_6nt7.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Charlas educativas
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_heartbroken_cble.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Orientación vocacional
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Peritazgos jurídicos
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_i_can_fly_7egl.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Atención a Trastornos emocionales
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_smiley_face_lmgm.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Ansiedad
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_young_and_happy_hfpe.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Depresión
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
-                <div class="service">
-                    <div class="icon">
-                        <img src="/images/icons/undraw_friendship_mni7.svg" alt="icon" width="100">
-                    </div>
-                    <div class="service_title">
-                        Tratamiento en adicciones
-                    </div>
-                    <div class="service_description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam aliquid iste ab esse, deserunt enim sit perferendis repudiandae expedita dicta quasi illum ratione quia minus impedit accusantium ex ut quibusdam?
-                    </div>
-                </div>
+                <service
+                v-for="(service, index) of services"
+                :key="index"
+                :service="service"
+                ></service>
             </div>
         </div>
         <!-- /Services -->
 
         <!-- Map -->
         <div class="contenedor section">
-            <div class="title">
-                <img src="/images/icons/map-marker.svg" alt="map-marker" width="30"> 
+            <div class="section_title">
+                <img src="/images/icons/map-marker.svg" alt="map-marker" width="30">
                 Ubicación
             </div>
-            <div class="description">
-                Carrera 76 #49-11, Medellín, Colombia
+            <div class="big_description">
+                Tel: 230-90-88
+                <div class="description">
+                    Carrera 76 #49-11, Medellín, Colombia
+                </div>
             </div>
             <location></location>
         </div>
@@ -202,7 +111,8 @@
 
             this.getBlogPosts();
             this.getInstagramPosts();
-            
+            this.getServices();
+
             setTimeout(() => {
                 this.filteredInstagramPosts = this.filterPosts( this.instagram_posts, '#psicosamy' );
             }, 3000);
@@ -214,11 +124,13 @@
         },
         computed: {
             ...mapState( 'blogStore', [ 'blog_posts' ] ),
-            ...mapState( 'instagramStore', [ 'instagram_posts' ] )
+            ...mapState( 'instagramStore', [ 'instagram_posts' ] ),
+            ...mapState( 'servicesStore', [ 'services' ] )
         },
         methods: {
             ...mapActions( 'blogStore', [ 'getBlogPosts' ] ),
             ...mapActions( 'instagramStore', [ 'getInstagramPosts' ] ),
+            ...mapActions( 'servicesStore', [ 'getServices' ] ),
         }
     }
 </script>

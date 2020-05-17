@@ -13,6 +13,7 @@
     <link rel="icon" href="{{ asset('images/Samuel Taborda Icon.png') }}">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/landing_pages/app.css') }}">
 
     <!-- Applause Button -->
@@ -22,7 +23,11 @@
 <body>
 
     <div id="app">
-        <app></app>
+        <v-app>
+            <v-container>
+            <app></app>
+            </v-container>
+        </v-app>
     </div>
     
     <!-- Scripts -->

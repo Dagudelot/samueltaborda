@@ -67,20 +67,46 @@ iframe{
     border: 1px $lightblue solid;
 }
 
-.title{
+.right{
+    margin: auto;
+    display: flex;
+    margin-right: 0;
+}
+
+.left{
+    margin: auto;
+    display: flex;
+    margin-left: 0;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.section_title{
     font-family: 'CircularStd-Medium', sans-serif;
     font-size: 3em;
     color: $darkfont;
 }
 
 .description{
-    font-size: 1em;
+    font-size: 1.15em;
     color: $gray;
     margin: 5em auto;
     width: 70%;
 }
 
-.tooltip {
+.big_description{
+    font-size: 2em;
+    margin: 2em auto;
+
+    > .description{
+        font-size: .6em;
+        margin: 1em auto;
+    }
+}
+
+.social_tooltip {
     position: relative;
     display: inline-block;
     
@@ -212,7 +238,7 @@ iframe{
         }
 
         #cta{
-            width: 30%;
+            width: 200px;
             margin: auto;
             background: $darkblue;
             
@@ -313,7 +339,7 @@ iframe{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 2em;
+        gap: 4em;
 
         .service{
             background: #fff;
@@ -386,7 +412,7 @@ iframe{
             padding: 2em 3em;
             margin-right: 2em;
 
-            .title {
+            .section_title {
                 font-size: 1.3em;
                 width: 200px;
                 margin-top: 1em;
@@ -432,7 +458,7 @@ iframe{
         margin: auto;
         padding: 1em 5em;
 
-        .title{
+        .section_title{
             text-align: center;
             margin: 1em auto;
             font-size: 2em;
@@ -456,6 +482,13 @@ iframe{
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 1300px){
+
+    .container{
+        max-width: 95vw;
     }
 }
 
@@ -548,6 +581,10 @@ iframe{
 // Phone
 @media only screen and (max-width: 768px){
 
+    .container{
+        padding: 0;
+    }
+
     .contenedor{
         width: 90%;
     }
@@ -564,12 +601,12 @@ iframe{
         bottom: 10%;
     }
 
-    .title{
+    .section_title{
         font-size: 1.5em;
     }
     
     .description{
-        font-size: .9em;
+        font-size: 1.1em;
         margin: 3em auto;
         width: 90%;
     }
@@ -591,14 +628,15 @@ iframe{
 
         #nav{
             position: fixed;
-            padding: .5em;;
-            z-index: 1;
-            bottom: 0;
+            padding: 2em 1em;
+            z-index: 2;
+            bottom: 0em;
             width: 100%;
             left: 0;
-            background: $lightgray;
+            background: #fff;
             height: 35px;
             border-top: .001em $lightgray solid;
+            box-shadow: 0px 0 1.5px rgba(0, 0, 0, 0.5);
 
             .nav_item{
                 margin: 0;
@@ -640,6 +678,7 @@ iframe{
 
         #main_title_container{
             padding: 0;
+            z-index: 1;
 
             h1{
                 font-size: 4em;
@@ -661,7 +700,6 @@ iframe{
     
         #main_photo{
             position: absolute;
-            z-index: -1;
             width: 100%;
             left: 0;
             opacity: 0.35;
@@ -710,7 +748,7 @@ iframe{
     }
 
     #services_section{
-        padding: 0;
+        padding: 1em;
         margin-bottom: 1em;
 
         #services{
@@ -756,7 +794,7 @@ iframe{
                 max-height: 500px;
                 padding: 1em;
 
-                .title{
+                .section_title{
                     margin: 1em auto 0 auto;
                     width: 100%;
                 }

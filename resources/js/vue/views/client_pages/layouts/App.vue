@@ -1,11 +1,11 @@
 <template>
     <div>
         <!-- Social Aside -->
-        <a target="_blank" href="https://www.instagram.com/psicosamy/" class="tooltip float_left">
+        <a target="_blank" href="https://www.instagram.com/psicosamy/" class="social_tooltip float_left">
             <span class="tooltiptext">@psicosamy</span>
             <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
         </a>
-        <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip float_left">
+        <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="social_tooltip float_left">
             <span class="tooltiptext">YouTube</span>
             <img src="/images/icons/youtube.svg" alt="youtube" width="30">
         </a>
@@ -53,11 +53,11 @@
                     Desarrollado por <strong> <a target="_blank" href="https://wa.me/573005954214">Daniel Agudelo</a> </strong>
                 </div>
                 <div id="social">
-                    <a target="_blank" href="https://www.instagram.com/psicosamy/" class="tooltip">
+                    <a target="_blank" href="https://www.instagram.com/psicosamy/" class="social_tooltip">
                         <span class="tooltiptext">@psicosamy</span>
                         <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
                     </a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="tooltip">
+                    <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="social_tooltip">
                         <span class="tooltiptext">YouTube</span>
                         <img src="/images/icons/youtube.svg" alt="youtube" width="30">
                     </a>

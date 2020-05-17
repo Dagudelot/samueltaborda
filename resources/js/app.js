@@ -6,11 +6,13 @@ window.Vue = require( 'vue' );
 import Vue              from 'vue';
 import Vuex             from 'vuex';
 import VueRouter        from 'vue-router';
+import Vuetify          from 'vuetify'
 import routes           from './vue/routes';
 import storeData        from './vue/store';
 
 // Vue Use
 Vue.use( VueRouter );
+Vue.use( Vuetify );
 Vue.use( Vuex );
 
 // Components
@@ -19,6 +21,7 @@ Vue.component('instagram-post-card', require('./vue/components/InstagramPostCard
 Vue.component('under-construction', require('./vue/components/UnderConstruction.vue').default);
 Vue.component('related-post', require('./vue/components/RelatedPost.vue').default);
 Vue.component('location', require('./vue/components/Map.vue').default);
+Vue.component('service', require('./vue/components/Service.vue').default);
 
 Vue.component('app', require('./vue/views/client_pages/layouts/App.vue').default);
 
@@ -28,5 +31,6 @@ const store = new Vuex.Store( storeData );
 const app = new Vue({
     el: '#app',
     router,
-    store
+    store,
+    vuetify: new Vuetify()
 });
