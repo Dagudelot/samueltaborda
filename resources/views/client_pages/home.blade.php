@@ -35,7 +35,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/landing_pages/instagram.js') }}"></script>
     <script src="{{ asset('js/landing_pages/services.js') }}"></script>
-    <script src="{{ asset('js/landing_pages/parallax.js') }}"></script>
+    <script src="{{ asset('js/landing_pages/parallax.js') }}"></script> 
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- /Scripts -->
 </body>
 </html>

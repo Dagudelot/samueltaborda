@@ -295,7 +295,7 @@ iframe {
 }
 
 #latest_posts_section .overflow-x #latest_posts .post_card img, #latest_posts_section .overflow-x #instagram_posts .post_card img, #instagram_posts_section .overflow-x #latest_posts .post_card img, #instagram_posts_section .overflow-x #instagram_posts .post_card img {
-  width: 150%;
+  width: 100%;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
   -webkit-transition: -webkit-transform .1s;
