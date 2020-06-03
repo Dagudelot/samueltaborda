@@ -2249,6 +2249,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -38555,6 +38568,8 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
+    _vm._m(3),
+    _vm._v(" "),
     _c("div", { staticClass: "section", attrs: { id: "services_section" } }, [
       _c("div", { staticClass: "section_title" }, [
         _vm._v("\n            Servicios\n        ")
@@ -38579,7 +38594,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "contenedor section" },
-      [_vm._m(3), _vm._v(" "), _vm._m(4), _vm._v(" "), _c("location")],
+      [_vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("location")],
       1
     )
   ])
@@ -38667,6 +38682,53 @@ var staticRenderFns = [
       ),
       _vm._v(
         ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "contenedor section" }, [
+      _c("div", { staticClass: "section_title" }, [
+        _c("img", {
+          attrs: {
+            src: "/images/icons/twitter.svg",
+            alt: "twitter",
+            width: "30"
+          }
+        }),
+        _vm._v("\n            Twitter\n        ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "description" }, [
+        _vm._v("\n            😀 Me puedes seguir en "),
+        _c(
+          "a",
+          {
+            attrs: {
+              target: "_blank",
+              href: "https://twitter.com/samueltabordari"
+            }
+          },
+          [_vm._v("@psicosamy")]
+        ),
+        _vm._v(
+          ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "twitter-timeline",
+          attrs: {
+            "data-height": "1000",
+            "data-theme": "light",
+            href: "https://twitter.com/samueltabordari?ref_src=twsrc%5Etfw"
+          }
+        },
+        [_vm._v("Tweets de Samuel Taborda")]
       )
     ])
   },
@@ -97765,17 +97827,32 @@ __webpack_require__.r(__webpack_exports__);
   },
   actions: {
     getInstagramPosts: function getInstagramPosts(state) {
-      fetch("https://instagram9.p.rapidapi.com/api/instagram?kullaniciadi=psicosamy&lang=en", {
-        "method": "GET",
-        "headers": {
-          "x-rapidapi-host": "instagram9.p.rapidapi.com",
-          "x-rapidapi-key": "848a6201a0msh86d26eb7b0bd870p1f1e8ajsn6ecb6d88b929"
-        }
+      var posts = [];
+      fetch("https://www.instagram.com/psicosamy/?__a=1", {
+        "method": "GET"
       }).then(function (response) {
         return response.json();
       }).then(function (res) {
-        localStorage.setItem('instagramPosts', JSON.stringify(res.posts));
-        state.commit('SET_INSTAGRAM_POSTS', res.posts);
+        var ig_posts = res.graphql.user.edge_owner_to_timeline_media.edges.filter(function (post) {
+          return post.node.__typename == "GraphImage";
+        });
+        ig_posts.forEach(function (post) {
+          var image = post.node.display_url;
+          var captions = post.node.edge_media_to_caption.edges;
+          var caption = captions.length > 0 ? post.node.edge_media_to_caption.edges[0].node.text : '';
+          var shortcode = post.node.shortcode;
+          var timestamp = post.node.taken_at_timestamp;
+          posts.push({
+            attachments: {
+              'link': image
+            },
+            'text': caption,
+            'link': "https://www.instagram.com/p/".concat(shortcode),
+            timestamp: timestamp
+          });
+        });
+        localStorage.setItem('instagramPosts', JSON.stringify(posts));
+        state.commit('SET_INSTAGRAM_POSTS', posts);
       })["catch"](function (err) {
         var savedPosts = localStorage.getItem('instagramPosts');
         state.commit('SET_INSTAGRAM_POSTS', JSON.parse(savedPosts));

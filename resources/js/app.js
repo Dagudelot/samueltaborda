@@ -3,12 +3,12 @@ require( './bootstrap' );
 window.Vue = require( 'vue' );
 
 // Imports
-import Vue              from 'vue';
-import Vuex             from 'vuex';
-import VueRouter        from 'vue-router';
-import Vuetify          from 'vuetify'
-import routes           from './vue/routes';
-import storeData        from './vue/store';
+import Vue                  from 'vue';
+import Vuex                 from 'vuex';
+import VueRouter            from 'vue-router';
+import Vuetify              from 'vuetify'
+import routes               from './vue/routes';
+import storeData            from './vue/store';
 
 // Vue Use
 Vue.use( VueRouter );
