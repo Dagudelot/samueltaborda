@@ -80,19 +80,6 @@
         </div>
         <!-- /Latest Posts (Twitter) Container -->
 
-        <!-- Latest Posts (Twitter) Container -->
-        <div class="contenedor section">
-            <div class="section_title">
-                <img src="/images/icons/books.svg" alt="biblioteca" width="30">
-                Biblioteca virtual
-            </div>
-            <div class="description">
-                &#128512; En la biblioteca virtual podrás encontrar recursos para que no pares de aprender.
-            </div>
-            <iframe src="https://www.cgtr.edu.co/" style="width; 100%; height: 800px"></iframe>
-        </div>
-        <!-- /Latest Posts (Twitter) Container -->
-
         <!-- Services -->
         <div class="section" id="services_section">
             <div class="section_title">

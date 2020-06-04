@@ -2280,19 +2280,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -38630,8 +38617,6 @@ var render = function() {
     _vm._v(" "),
     _vm._m(3),
     _vm._v(" "),
-    _vm._m(4),
-    _vm._v(" "),
     _c("div", { staticClass: "section", attrs: { id: "services_section" } }, [
       _c("div", { staticClass: "section_title" }, [
         _vm._v("\n            Servicios\n        ")
@@ -38656,7 +38641,7 @@ var render = function() {
     _c(
       "div",
       { staticClass: "contenedor section" },
-      [_vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _c("location")],
+      [_vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _c("location")],
       1
     )
   ])
@@ -38794,34 +38779,6 @@ var staticRenderFns = [
           [_vm._v("Tweets de Samuel Taborda")]
         )
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contenedor section" }, [
-      _c("div", { staticClass: "section_title" }, [
-        _c("img", {
-          attrs: {
-            src: "/images/icons/books.svg",
-            alt: "biblioteca",
-            width: "30"
-          }
-        }),
-        _vm._v("\n            Biblioteca virtual\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "description" }, [
-        _vm._v(
-          "\n            😀 En la biblioteca virtual podrás encontrar recursos para que no pares de aprender.\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _c("iframe", {
-        staticStyle: { height: "800px" },
-        attrs: { src: "https://www.cgtr.edu.co/" }
-      })
     ])
   },
   function() {
