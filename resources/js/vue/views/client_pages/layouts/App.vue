@@ -18,6 +18,10 @@
                     <img src="/images/Samuel Taborda Logo.png" alt="Samuel Taborda Logo">
                 </router-link>
                 <div id="nav">
+                <div class="nav_item">
+                        <img src="/images/icons/book_footer.svg" alt="library" width="20">
+                        <a target="_blank" href="https://sites.google.com/cgtr.edu.co/gtrlibrary/recursos-interactivos" class="animated">Biblioteca virtual</a>
+                    </div>
                     <div class="nav_item">
                         <img src="/images/icons/me.svg" alt="home" width="20">
                         <router-link :to="{ name : 'about' }" class="animated">Acerca de mí</router-link>

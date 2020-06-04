@@ -74,7 +74,22 @@
             <div class="description">
                 &#128512; Me puedes seguir en <a target="_blank" href="https://twitter.com/samueltabordari">@psicosamy</a>, donde estoy siempre activo publicando mucho contenido de tu interés.
             </div>
-            <a class="twitter-timeline" data-height="1000" data-theme="light" href="https://twitter.com/samueltabordari?ref_src=twsrc%5Etfw">Tweets de Samuel Taborda</a>
+            <div id="twitter-timeline">
+                <a class="twitter-timeline" data-height="1000" data-theme="dark" href="https://twitter.com/samueltabordari?ref_src=twsrc%5Etfw">Tweets de Samuel Taborda</a>
+            </div>
+        </div>
+        <!-- /Latest Posts (Twitter) Container -->
+
+        <!-- Latest Posts (Twitter) Container -->
+        <div class="contenedor section">
+            <div class="section_title">
+                <img src="/images/icons/books.svg" alt="biblioteca" width="30">
+                Biblioteca virtual
+            </div>
+            <div class="description">
+                &#128512; En la biblioteca virtual podrás encontrar recursos para que no pares de aprender.
+            </div>
+            <iframe src="https://www.cgtr.edu.co/" style="width; 100%; height: 800px"></iframe>
         </div>
         <!-- /Latest Posts (Twitter) Container -->
 

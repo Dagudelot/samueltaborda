@@ -28,6 +28,16 @@ iframe {
   width: 100%;
 }
 
+#twitter-timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 12em;
+}
+
 .contenedor {
   width: 80%;
   margin: auto;
@@ -552,6 +562,9 @@ iframe {
   }
   .section {
     margin: 6em auto;
+  }
+  #twitter-timeline {
+    margin: 0;
   }
   .float_right, .float_left {
     display: none;
