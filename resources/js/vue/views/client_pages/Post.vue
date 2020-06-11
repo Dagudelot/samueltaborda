@@ -39,8 +39,8 @@
             </div>
         </div>
 
-        <applause-button id="applause_button" 
-        multiclap="true" 
+        <applause-button id="applause_button"
+        multiclap="true"
         color="#145a7e"
         ></applause-button>
 
@@ -50,8 +50,8 @@
                 Quizá te interese...
             </div>
             <div class="related_posts">
-                <router-link 
-                :to="{ name : 'post', params: { 'post_id' : post.slug } }" 
+                <router-link
+                :to="{ name : 'post', params: { 'post_id' : post.slug } }"
                 class="related_post"
                 v-for="(post, index) of related_posts"
                 :key="index">
@@ -72,14 +72,9 @@
     export default {
         mixins: [ mixins ],
         mounted(){
-            var post_id = this.$route.params.post_id;
+            var post_slug = this.$route.params.post_slug;
 
-            this.findPost( post_id );
-        },
-        data(){
-            return {
-                dani: ''
-            }
+            this.findPost( this.selected_post );
         },
         computed: {
             ...mapState( 'blogStore', [ 'selected_post', 'related_posts' ] ),

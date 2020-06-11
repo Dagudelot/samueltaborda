@@ -19,9 +19,9 @@ export default {
         }
     },
     actions: {
-        getBlogPosts( state ) {
+        getBlogPosts( state, data ) {
 
-            fetch("/studio/api/posts/", {
+            return fetch(`${data.url}${data.limit}`, {
                 "method": "GET"
             })
             .then(response => {
@@ -32,6 +32,8 @@ export default {
                     var limited_posts = res.posts.slice(0, 6);
                     localStorage.setItem('blogPosts', JSON.stringify(limited_posts));
                     state.commit('SET_BLOG_POSTS', limited_posts);
+
+                    return res.posts;
                 }
             })
             .catch(err => {
@@ -39,9 +41,41 @@ export default {
                 state.commit('SET_BLOG_POSTS', JSON.parse(savedPosts));
             });
         },
-        findPost( state, post_id ){
+        searchPosts( state, payload ) {
 
-            fetch("/studio/api/posts/" + post_id, {
+            return fetch(`/studio/api/search/${payload}`, {
+                "method": "GET"
+            })
+            .then(response => {
+                if( response.ok ) return response.json()
+            })
+            .then(res => {
+                return res;
+            })
+            .catch(err => {
+                var savedPosts = localStorage.getItem('blogPosts');
+                state.commit('SET_BLOG_POSTS', JSON.parse(savedPosts));
+            });
+        },
+        getTopics( state, data ) {
+
+            return fetch(`${data.url}`, {
+                "method": "GET"
+            })
+            .then(response => {
+                if( response.ok ) return response.json()
+            })
+            .then(res => {
+                if(res.topics) return res.topics;
+            })
+            .catch(err => {
+                var savedPosts = localStorage.getItem('blogPosts');
+                state.commit('SET_BLOG_POSTS', JSON.parse(savedPosts));
+            });
+        },
+        findPost( state, post ){
+
+            fetch(`/studio/api/posts/${post.user_id}/${post.slug}`, {
                 "method": "GET"
             })
             .then(response => {

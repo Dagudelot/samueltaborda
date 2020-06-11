@@ -26,17 +26,17 @@
     export default {
         mixins: [ mixins ],
         props: [ 'post' ],
-        mounted() {
-        },
-        computed: {
-            
-        },
         methods: {
             ...mapMutations( 'blogStore', [ 'SET_SELECTED_POST' ]),
             openPost(){
                 this.SET_SELECTED_POST( this.post );
-                
-                this.$router.push({ name: 'post', params: { post_id: this.post.slug }});
+
+                this.$router.push({
+                    name: 'post',
+                    params: {
+                        post_slug: this.post.slug
+                    }
+                });
             }
         }
     }

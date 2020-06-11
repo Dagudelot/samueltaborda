@@ -7,6 +7,7 @@ use Canvas\Events\PostViewed;
 use Canvas\Post;
 use Canvas\UserMeta;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends BaseController
 {
@@ -44,11 +45,12 @@ class PostController extends BaseController
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index(Request $request)
+    public function index(int $limit)
     {
-        $posts = Post::with([ 'tags', 'topic' ])->published()
+        $posts = Post::with([ 'tags', 'topic', 'user' ])->published()
                      ->withUserMeta()
                      ->orderByDesc('published_at')
+                     ->take($limit)
                      ->get();
 
         $posts->each->append('read_time');
@@ -66,7 +68,7 @@ class PostController extends BaseController
      * @param string $slug
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Request $request, string $identifier, string $slug = null)
+    public function show(string $identifier, string $slug)
     {
         $posts = Post::published()->withUserMeta()->get();
         $post = $posts->firstWhere('slug', $slug);
@@ -108,6 +110,21 @@ class PostController extends BaseController
         } else {
             return response()->json(null, 404);
         }
+    }
+
+    /**
+     * Search posts by a given payload.
+     *
+     * @param string $payload
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function search(string $payload)
+    {
+        return Post::published()
+            ->with([ 'tags', 'topic', 'user' ])
+            ->whereLike(['title', 'slug', 'topic.name', 'tags.name'], $payload)
+            ->orderByDesc('published_at')
+            ->get();
     }
 
     /**
