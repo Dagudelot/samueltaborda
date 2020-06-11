@@ -28,11 +28,14 @@
             </div>
             <div class="overflow-x">
                 <div id="latest_posts">
-                    <blog-post-card
+                    <div class="review_posts"
                     v-for="(post, index) of blog_posts"
                     :key="index"
-                    :post="post"
-                    ></blog-post-card>
+                    >
+                        <blog-post-card
+                        :post="post"
+                        ></blog-post-card>
+                    </div>
                 </div>
             </div>
 
@@ -124,7 +127,10 @@
         mixins: [ mixins ],
         mounted(){
 
-            this.getBlogPosts();
+            this.getBlogPosts({
+                url: '/studio/api/posts/',
+                limit: 6
+            });
             this.getInstagramPosts();
             this.getServices();
 

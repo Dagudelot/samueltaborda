@@ -138,7 +138,7 @@ iframe {
 
 .float_left {
   position: fixed;
-  top: 50%;
+  top: 70%;
   left: 1%;
 }
 
@@ -287,7 +287,7 @@ iframe {
   width: 100%;
 }
 
-#latest_posts_section .overflow-x #latest_posts, #latest_posts_section .overflow-x #instagram_posts, #instagram_posts_section .overflow-x #latest_posts, #instagram_posts_section .overflow-x #instagram_posts {
+.overflow-x #latest_posts, .overflow-x #instagram_posts {
   position: relative;
   margin-bottom: 3em;
   display: -ms-grid;
@@ -297,14 +297,15 @@ iframe {
   gap: 2em;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card, #latest_posts_section .overflow-x #instagram_posts .post_card, #instagram_posts_section .overflow-x #latest_posts .post_card, #instagram_posts_section .overflow-x #instagram_posts .post_card {
+.post_card {
+  position: relative;
   opacity: .85;
   overflow: hidden;
   border-radius: 7px;
   cursor: pointer;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card img, #latest_posts_section .overflow-x #instagram_posts .post_card img, #instagram_posts_section .overflow-x #latest_posts .post_card img, #instagram_posts_section .overflow-x #instagram_posts .post_card img {
+.post_card img {
   width: 100%;
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
@@ -314,26 +315,26 @@ iframe {
   transition: transform .1s, -webkit-transform .1s;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card .post_card_information, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information {
+.post_card .post_card_information {
   position: absolute;
   color: #fff;
-  margin-top: -15%;
+  margin-top: -40%;
   margin-left: 1%;
-  width: 23vw;
+  width: 90%;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_title, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_title, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_title, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_title {
+.post_card .post_card_information .post_card_title {
   font-family: 'CircularStd-Medium', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_date, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_date, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_date, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_date {
-  text-align: left;
+.post_card .post_card_information .post_card_date {
+  text-align: center;
   font-size: 1em;
-  margin: 1.5em 0 0.2em 0;
+  margin: 1.2em 0 0.2em 0;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul {
+.post_card .post_card_information .post_card_tags ul {
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,12 +342,133 @@ iframe {
   overflow: hidden;
 }
 
-#latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul li, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul li, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul li, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags ul li {
+.post_card .post_card_information .post_card_tags ul li {
   padding: 0 .5em;
   margin: 0 .3em;
   background: #22D1EE;
   border-radius: 10px;
   color: #2C2C2C;
+}
+
+.posts_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+#blog_container {
+  margin: 2em 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5fr;
+      grid-template-columns: 1fr 5fr;
+}
+
+#blog_container h2 {
+  margin-top: 2em;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+#blog_container .blog_sidebar #blog_categories {
+  position: fixed;
+}
+
+#blog_container .blog_sidebar #blog_categories #categories_ul {
+  list-style: none;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+#blog_container .blog_sidebar #blog_categories #categories_ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: .5em auto;
+  border-bottom: 1px solid #707070;
+  cursor: pointer;
+}
+
+#blog_container .blog_sidebar #blog_categories #categories_ul li .category_count {
+  background-color: #22D1EE;
+  padding: .1em .4em;
+  color: #fff;
+  text-align: center;
+}
+
+#blog_container #posts_container #outstanding_posts {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+#search_container #search_img {
+  width: 22px;
+  height: 22px;
+  margin: 14px 0 0 14px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#search_container #search_input {
+  background: #145a7e;
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+#search_container #search_input::-webkit-input-placeholder {
+  color: #83b9ca;
+}
+
+#search_container #search_input:-ms-input-placeholder {
+  color: #83b9ca;
+}
+
+#search_container #search_input::-ms-input-placeholder {
+  color: #83b9ca;
+}
+
+#search_container #search_input::placeholder {
+  color: #83b9ca;
+}
+
+#search_container #search_input:focus {
+  outline: none;
+}
+
+#search_container #search_tip {
+  display: block;
+  color: #145a7e;
+  font-size: .8em;
+  text-transform: uppercase;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+#search_container:before {
+  content: "";
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #22D1EE;
+  position: absolute;
+  -webkit-animation: grow-search 1s 8;
+          animation: grow-search 1s 8;
+  opacity: 0;
 }
 
 #services_section {
@@ -436,12 +558,12 @@ iframe {
 .post .post_container .post_information {
   border-radius: 3px;
   border: 1px #e6e6e6 solid;
-  max-height: 400px;
+  max-height: 500px;
   padding: 2em 3em;
-  margin-right: 2em;
+  margin: 1em auto;
 }
 
-.post .post_container .post_information .section_title {
+.post .post_container .post_information .title {
   font-size: 1.3em;
   width: 200px;
   margin-top: 1em;
@@ -483,7 +605,7 @@ iframe {
   padding: 1em 5em;
 }
 
-.post .related_posts_section .section_title {
+.post .related_posts_section .title {
   text-align: center;
   margin: 1em auto;
   font-size: 2em;
@@ -501,6 +623,32 @@ iframe {
 .post .related_posts_section .related_posts .related_post img {
   width: 70%;
   border-radius: 7px;
+}
+
+@-webkit-keyframes grow-search {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes grow-search {
+  from {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -538,13 +686,13 @@ iframe {
   #welcome_section #main_photo {
     width: 110%;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information {
+  .post_card .post_card_information {
     margin-top: -16%;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_title {
+  .post_card .post_card_information .post_card_title {
     font-size: 1em;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags ul li {
+  .post_card .post_card_information .post_card_tags ul li {
     font-size: .8em;
   }
   .post .post_container .post_content {
@@ -561,7 +709,7 @@ iframe {
     width: 90%;
   }
   .section {
-    margin: 6em auto;
+    margin: 1em auto 5em auto;
   }
   #twitter-timeline {
     margin: 0;
@@ -662,37 +810,74 @@ iframe {
     -webkit-filter: blur(5px);
             filter: blur(5px);
   }
-  #latest_posts_section .overflow-x, #instagram_posts_section .overflow-x {
+  .overflow-x {
     overflow-x: scroll;
     overflow-y: hidden;
     width: 105%;
   }
-  #latest_posts_section .overflow-x #latest_posts, #latest_posts_section .overflow-x #instagram_posts, #instagram_posts_section .overflow-x #latest_posts, #instagram_posts_section .overflow-x #instagram_posts {
+  .overflow-x #latest_posts, .overflow-x #instagram_posts {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 140vh;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card, #latest_posts_section .overflow-x #instagram_posts .post_card, #instagram_posts_section .overflow-x #latest_posts .post_card, #instagram_posts_section .overflow-x #instagram_posts .post_card {
+  .overflow-x #latest_posts .review_posts, .overflow-x #instagram_posts .review_posts {
     max-width: 210px;
     min-width: 210px;
     max-height: 320px;
-    margin: 0 .5em;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card img, #latest_posts_section .overflow-x #instagram_posts .post_card img, #instagram_posts_section .overflow-x #latest_posts .post_card img, #instagram_posts_section .overflow-x #instagram_posts .post_card img {
+  .post_card {
+    width: 95%;
+    margin: 0 .5em;
+    position: relative;
+  }
+  .post_card img {
     width: 300%;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information {
-    margin-top: -20%;
+  .post_card .post_card_information {
+    margin-top: -60%;
     margin-left: 0;
-    width: 190px;
-  }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_title, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_title, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_title, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_title {
-    font-size: 1em;
     width: 100%;
   }
-  #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_date, #latest_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_date, #latest_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_date, #instagram_posts_section .overflow-x #latest_posts .post_card .post_card_information .post_card_tags, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_date, #instagram_posts_section .overflow-x #instagram_posts .post_card .post_card_information .post_card_tags {
+  .post_card .post_card_information .post_card_title {
+    font-size: 1.2em;
+    width: 100%;
+  }
+  .post_card .post_card_information .post_card_date, .post_card .post_card_information .post_card_tags {
     display: none;
+  }
+  #blog_container {
+    margin: auto 1em;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #blog_container .blog_sidebar #blog_categories {
+    position: relative;
+  }
+  #blog_container #posts_container #outstanding_posts {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+  }
+  #blog_container #posts_container #outstanding_posts .post_card {
+    height: 300px;
+  }
+  #blog_container #posts_container #outstanding_posts .post_card .post_card_information {
+    margin-top: -150%;
+  }
+  #blog_container #posts_container #outstanding_posts .post_card .post_card_information .post_card_title {
+    font-size: 1.3em;
+  }
+  .posts_grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (minmax(100px, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1em;
   }
   #services_section {
     padding: 1em;
@@ -727,12 +912,10 @@ iframe {
     margin: 0;
   }
   .post .post_container .post_information {
-    margin: 0;
     max-height: 500px;
     padding: 1em;
   }
-  .post .post_container .post_information .section_title {
-    margin: 1em auto 0 auto;
+  .post .post_container .post_information .title {
     width: 100%;
   }
   .post .post_container .post_content {

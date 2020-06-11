@@ -16,12 +16,16 @@ class TopicController extends BaseController
      */
     public function index(Request $request)
     {
-        return Topic::select(['name', 'slug'])
+        $topics = Topic::with([ 'posts' ])
                     ->whereHas('posts')
                     ->withCount('posts')
                     ->orderByDesc('posts_count')
                     ->take(15)
                     ->get();
+
+        return response()->json([
+            'topics' => $topics
+        ]);
     }
 
     /**

@@ -20,7 +20,7 @@
                 <div id="nav">
                 <div class="nav_item">
                         <img src="/images/icons/book_footer.svg" alt="library" width="20">
-                        <a target="_blank" href="https://sites.google.com/cgtr.edu.co/gtrlibrary/recursos-interactivos" class="animated">Biblioteca virtual</a>
+                        <a target="_blank" href="https://sites.google.com/cgtr.edu.co/gtrlibrary/recursos-interactivos" class="animated">Biblioteca</a>
                     </div>
                     <div class="nav_item">
                         <img src="/images/icons/me.svg" alt="home" width="20">
