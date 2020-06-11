@@ -6,6 +6,7 @@ use App\User;
 use Canvas\Events\PostViewed;
 use Canvas\Post;
 use Canvas\UserMeta;
+use Canvas\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -45,7 +46,7 @@ class PostController extends BaseController
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index(int $limit)
+    public function index(int $limit = 50)
     {
         $posts = Post::with([ 'tags', 'topic', 'user' ])->published()
                      ->withUserMeta()
@@ -125,6 +126,23 @@ class PostController extends BaseController
             ->whereLike(['title', 'slug', 'topic.name', 'tags.name'], $payload)
             ->orderByDesc('published_at')
             ->get();
+    }
+
+    /**
+     * Get all the posts, tags, and topics.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getMostViewedPosts()
+    {
+        $posts = Post::withCount('views')
+                ->orderBy('views_count', 'desc')
+                ->take(2)
+                ->get();
+
+        return response()->json([
+            'posts' => $posts,
+        ]);
     }
 
     /**

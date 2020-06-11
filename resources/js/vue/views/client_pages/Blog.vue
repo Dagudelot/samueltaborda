@@ -27,7 +27,7 @@
                 <!-- Most Read Posts -->
                 <div v-if="outstandingPosts.length > 0">
                     <h2>Lo más leído</h2>
-                    <div id="outstandingPosts" class="posts_grid">
+                    <div id="outstanding_posts" class="posts_grid">
                         <blog-post-card
                         v-for="(post, index) of outstandingPosts"
                         :key="index"
@@ -96,21 +96,9 @@
         mounted(){
             this.importScripts();
 
-            this.getBlogPosts({
-                'url': '/studio/api/posts/',
-                'limit': 10
-            })
-            .then(posts => {
-                this.outstandingPosts = posts.slice(0, 2);
-                this.recentPosts = posts.slice(2, 10);
-            });
-
-            this.getTopics({
-                'url': '/studio/api/topics/',
-            })
-            .then(topics => {
-                this.topics = topics;
-            });
+            this.getOutstangindPosts();
+            this.getRecentPosts();
+            this.getPostsByTopics();
         },
         data(){
             return {
@@ -135,6 +123,32 @@
         },
         methods: {
             ...mapActions( 'blogStore', [ 'getBlogPosts', 'getTopics', 'searchPosts' ] ),
+            getOutstangindPosts(){
+                this.getBlogPosts({
+                    url: '/studio/api/posts/',
+                    limit: ''
+                })
+                .then(posts => {
+                    this.outstandingPosts = posts;
+                });
+            },
+            getRecentPosts(){
+                this.getBlogPosts({
+                    url: '/studio/api/posts/',
+                    limit: 50
+                })
+                .then(posts => {
+                    this.recentPosts = posts;
+                });
+            },
+            getPostsByTopics(){
+                this.getTopics({
+                    'url': '/studio/api/topics/',
+                })
+                .then(topics => {
+                    this.topics = topics;
+                });
+            },
             search(){
                 this.searchPosts( this.searchData.payload )
                 .then(posts => {

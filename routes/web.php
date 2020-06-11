@@ -24,6 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('Studio')->prefix(config('studio.path'))->group(function () {
     Route::prefix('api')->group(function () {
         Route::prefix('posts')->group(function () {
+            Route::get('/', 'PostController@getMostViewedPosts');
             Route::get('/{limit}', 'PostController@index');
             Route::get('{identifier}/{slug}', 'PostController@show')->middleware('Canvas\Http\Middleware\Session');
         });

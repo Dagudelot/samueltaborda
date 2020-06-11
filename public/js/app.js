@@ -2254,21 +2254,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_mixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
   mounted: function mounted() {
-    var _this = this;
-
     this.importScripts();
-    this.getBlogPosts({
-      'url': '/studio/api/posts/',
-      'limit': 10
-    }).then(function (posts) {
-      _this.outstandingPosts = posts.slice(0, 2);
-      _this.recentPosts = posts.slice(2, 10);
-    });
-    this.getTopics({
-      'url': '/studio/api/topics/'
-    }).then(function (topics) {
-      _this.topics = topics;
-    });
+    this.getOutstangindPosts();
+    this.getRecentPosts();
+    this.getPostsByTopics();
   },
   data: function data() {
     return {
@@ -2290,31 +2279,60 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('blogStore', ['blog_posts', 'selected_post'])),
   methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('blogStore', ['getBlogPosts', 'getTopics', 'searchPosts'])), {}, {
-    search: function search() {
+    getOutstangindPosts: function getOutstangindPosts() {
+      var _this = this;
+
+      this.getBlogPosts({
+        url: '/studio/api/posts/',
+        limit: ''
+      }).then(function (posts) {
+        _this.outstandingPosts = posts;
+      });
+    },
+    getRecentPosts: function getRecentPosts() {
       var _this2 = this;
 
+      this.getBlogPosts({
+        url: '/studio/api/posts/',
+        limit: 50
+      }).then(function (posts) {
+        _this2.recentPosts = posts;
+      });
+    },
+    getPostsByTopics: function getPostsByTopics() {
+      var _this3 = this;
+
+      this.getTopics({
+        'url': '/studio/api/topics/'
+      }).then(function (topics) {
+        _this3.topics = topics;
+      });
+    },
+    search: function search() {
+      var _this4 = this;
+
       this.searchPosts(this.searchData.payload).then(function (posts) {
-        _this2.searchData.posts = posts;
-        _this2.outstandingPosts = [];
-        _this2.recentPosts = [];
-        _this2.topics = [];
+        _this4.searchData.posts = posts;
+        _this4.outstandingPosts = [];
+        _this4.recentPosts = [];
+        _this4.topics = [];
       });
     },
     importScripts: function importScripts() {
-      var _this3 = this;
+      var _this5 = this;
 
       this.searchData.searchImg = document.getElementById('search_img'), this.searchData.searchInput = document.getElementById('search_input'), this.searchData.searchTip = document.getElementById('search_tip'), this.searchData.searchImg.addEventListener('click', function () {
-        _this3.searchData.searchInput.style.width = "50%";
-        _this3.searchData.searchInput.style.paddingLeft = "50px";
-        _this3.searchData.searchInput.style.cursor = "text";
+        _this5.searchData.searchInput.style.width = "50%";
+        _this5.searchData.searchInput.style.paddingLeft = "50px";
+        _this5.searchData.searchInput.style.cursor = "text";
 
-        _this3.searchData.searchInput.focus();
+        _this5.searchData.searchInput.focus();
 
-        _this3.typeWriter();
+        _this5.typeWriter();
       });
       this.searchData.searchInput.addEventListener('keydown', function () {
-        _this3.searchData.searchTip.style.visibility = "visible";
-        _this3.searchData.searchTip.style.opacity = 1;
+        _this5.searchData.searchTip.style.visibility = "visible";
+        _this5.searchData.searchTip.style.opacity = 1;
       });
     },
     typeWriter: function typeWriter() {
@@ -38756,7 +38774,7 @@ var render = function() {
                   "div",
                   {
                     staticClass: "posts_grid",
-                    attrs: { id: "outstandingPosts" }
+                    attrs: { id: "outstanding_posts" }
                   },
                   _vm._l(_vm.outstandingPosts, function(post, index) {
                     return _c("blog-post-card", {
@@ -39172,7 +39190,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.selected_post == null
+  return _vm.selected_post == null || _vm.selected_post.user_meta == null
     ? _c("div", [_vm._v("\n    Cargando...\n")])
     : _c(
         "div",

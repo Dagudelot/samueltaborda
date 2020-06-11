@@ -1,5 +1,5 @@
 <template>
-    <div v-if=" selected_post == null ">
+    <div v-if=" selected_post == null || selected_post.user_meta == null ">
         Cargando...
     </div>
     <div class="post" v-else>
