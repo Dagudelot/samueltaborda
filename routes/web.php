@@ -19,7 +19,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'HomeController@index')->name('home');
+
+Route::prefix('test')->middleware('auth')->group(function () {
+    Route::get('/{slug?}', 'TestsController@getTests');
+    Route::post('save', 'TestsController@save');
+});
 
 Route::namespace('Studio')->prefix(config('studio.path'))->group(function () {
     Route::prefix('api')->group(function () {

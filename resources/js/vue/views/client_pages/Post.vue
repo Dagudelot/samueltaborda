@@ -72,6 +72,7 @@
     export default {
         mixins: [ mixins ],
         mounted(){
+            this.jumpToTop();
             var post_slug = this.$route.params.post_slug;
 
             this.findPost( this.selected_post );

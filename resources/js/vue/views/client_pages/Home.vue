@@ -47,6 +47,35 @@
         </div>
         <!-- /Latest Posts Container -->
 
+        <!-- Latest Tests Container -->
+        <div class="contenedor section" v-if="tests.length > 0">
+            <div class="section_title">
+                Tests
+            </div>
+            <div class="description">
+                &#128512; Tests psicolçogicos para que analices tus conductas. ¡Pruébalo!
+            </div>
+            <div class="overflow-x">
+                <div id="latest_tests">
+                    <div
+                    v-for="(test, index) of tests"
+                    :key="index"
+                    >
+                        <test-card
+                        :test="test"
+                        ></test-card>
+                    </div>
+                </div>
+            </div>
+
+            <!--<router-link :to="{ name : 'blog' }">
+                <div class="button outline-button">
+                    Ver más &#128073;
+                </div>
+            </router-link>-->
+        </div>
+        <!-- /Latest Tests Container -->
+
         <!-- Latest Posts (Instagram) Container -->
         <div class="contenedor section" id="instagram_posts_section">
             <div class="section_title">
@@ -133,6 +162,7 @@
             });
             this.getInstagramPosts();
             this.getServices();
+            this.getAllTests();
 
             setTimeout(() => {
                 this.filteredInstagramPosts = this.filterPosts( this.instagram_posts, '#psicosamy' );
@@ -146,12 +176,14 @@
         computed: {
             ...mapState( 'blogStore', [ 'blog_posts' ] ),
             ...mapState( 'instagramStore', [ 'instagram_posts' ] ),
-            ...mapState( 'servicesStore', [ 'services' ] )
+            ...mapState( 'servicesStore', [ 'services' ] ),
+            ...mapState( 'testsStore', [ 'tests' ] ),
         },
         methods: {
             ...mapActions( 'blogStore', [ 'getBlogPosts' ] ),
             ...mapActions( 'instagramStore', [ 'getInstagramPosts' ] ),
             ...mapActions( 'servicesStore', [ 'getServices' ] ),
+            ...mapActions( 'testsStore', [ 'getAllTests' ] ),
         }
     }
 </script>

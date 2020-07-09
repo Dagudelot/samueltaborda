@@ -40,6 +40,9 @@ var mixins = {
             var day = published_at.substr(8, 2);
 
             return `${month} ${day}, ${year}`;
+        },
+        jumpToTop(){
+            scroll(0,0);
         }
     }
 }

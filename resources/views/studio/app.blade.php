@@ -28,14 +28,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/github.min.css">
 </head>
 <body>
-<div id="studio" class="mb-5">
-    <router-view></router-view>
-</div>
 
-<script>
-    window.Studio = @json($scripts);
-</script>
+    <div id="studio" class="mb-5">
+        <router-view></router-view>
+    </div>
 
-<script src="{{ asset('studio/js/app.js') }}" defer></script>
+    <script src="{{ asset('studio/js/app.js') }}" defer></script>
+    
 </body>
 </html>

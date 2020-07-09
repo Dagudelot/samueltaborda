@@ -283,6 +283,13 @@ iframe{
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;   
     }
+
+    #latest_tests{
+        display: grid;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em; 
+    }
 }
 
 .post_card{
@@ -836,6 +843,13 @@ iframe{
                 max-width: 210px;
                 min-width: 210px;
                 max-height: 320px;
+            }
+        }
+
+        #latest_tests{
+
+            div{
+                width: 60vw;
             }
         }
     }

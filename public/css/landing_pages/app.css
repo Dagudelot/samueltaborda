@@ -297,6 +297,15 @@ iframe {
   gap: 2em;
 }
 
+.overflow-x #latest_tests {
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
 .post_card {
   position: relative;
   opacity: .85;
@@ -826,6 +835,9 @@ iframe {
     max-width: 210px;
     min-width: 210px;
     max-height: 320px;
+  }
+  .overflow-x #latest_tests div {
+    width: 60vw;
   }
   .post_card {
     width: 95%;
