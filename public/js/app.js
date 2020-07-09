@@ -2378,8 +2378,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     save: function save() {
-      var _this = this;
-
       var data = {
         'title': this.title,
         'description': this.description,
@@ -2390,9 +2388,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       };
       this.saveTest(data).then(function (res) {
         if (res.data.status == 'success') {
-          _this.$route.go(-1);
+          alert('Test Creado correctamente');
+          window.location = "/admin";
         }
-      })["catch"](console.log);
+      })["catch"](function (err) {
+        alert('Faltan datos');
+      });
     }
   })
 });
@@ -40359,7 +40360,13 @@ var render = function() {
               expression: "expected"
             }
           ],
-          attrs: { type: "number", name: "expected", id: "expected_input" },
+          attrs: {
+            type: "number",
+            min: "0",
+            max: _vm.questions.length,
+            name: "expected",
+            id: "expected_input"
+          },
           domProps: { value: _vm.expected },
           on: {
             input: function($event) {

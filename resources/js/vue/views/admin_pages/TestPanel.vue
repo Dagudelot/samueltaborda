@@ -30,7 +30,7 @@
         <!-- Cut Point -->
         <div id="cut_point">
             <label for="expected">Punto de corte:</label>
-            <input type="number" v-model="expected" name="expected" id="expected_input">
+            <input type="number" v-model="expected" min="0" :max="questions.length" name="expected" id="expected_input">
             <input type="text" class="w-100" v-model="passedMessage" placeholder="Mensaje si pasa el test">
             <input type="text" class="w-100" v-model="failedMessage" placeholder="Mensaje si NO pasa el test">
         </div>
@@ -84,10 +84,13 @@ import { mapActions } from 'vuex';
                 this.saveTest(data)
                 .then(res => {
                     if( res.data.status == 'success' ){
-                        this.$route.go(-1);
+                        alert( 'Test Creado correctamente' );
+                        window.location = "/admin";
                     }
                 })
-                .catch(console.log);
+                .catch(err => {
+                    alert( 'Faltan datos' );
+                });
             }
         }
     }
