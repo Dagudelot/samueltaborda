@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('home');
 
-Route::prefix('test')->middleware('auth')->group(function () {
+Route::prefix('test')->group(function () {
     Route::get('/{slug?}', 'TestsController@getTests');
     Route::post('save', 'TestsController@save');
 });

@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Validator;
 
 class TestsController extends Controller
 {
+    public function __construct(){
+        $this->middleware([ 'auth' ])->except([ 'getTests' ]);
+    }
+
     public function getTests(string $slug = null){
         if($slug){
             return response()->json([
