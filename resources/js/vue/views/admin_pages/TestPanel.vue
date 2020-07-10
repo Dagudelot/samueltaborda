@@ -134,11 +134,6 @@ import { mapActions } from 'vuex';
         padding: 0 2em;
     }
 
-    #add_question_btn{
-        position: fixed;
-        left: 8em;
-    }
-
     #cut_point{
         margin-top: 10em;
     }
@@ -161,11 +156,6 @@ import { mapActions } from 'vuex';
     @media screen and (max-width: 768px){
         #save_test{
             position: relative;
-        }
-
-        #add_question_btn{
-            position: absolute;
-            left: 0;
         }
     }
 
