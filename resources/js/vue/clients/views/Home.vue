@@ -185,7 +185,7 @@
             ...mapActions( 'servicesStore', [ 'getServices' ] ),
             ...mapActions( 'testsStore', [ 'getAllTests' ] ),
             triggerCTA(){
-                const whatsappMessage = "¡Hola Samuel!";
+                const whatsappMessage = "Hola Samuel. Estoy interesad@ en tus servicios. ¿Podemos agendar una cita?";
                 window.open(`https://api.whatsapp.com/send?phone=573006205507&text=${whatsappMessage}`);
             }
         }
