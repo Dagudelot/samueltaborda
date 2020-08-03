@@ -4,7 +4,7 @@
         <template v-slot:activator="{ on }">
             <div v-on="on">
                 <div class="icon">
-                    <img src="/images/icons/undraw_celebration_0jvk.svg" alt="icon" width="100">
+                    <img :src="service.icon" alt="icon" width="100">
                 </div>
                 <div class="service_title">
                     {{ service.title }}
@@ -34,10 +34,10 @@
 <script>
   export default {
       props: [ 'service' ],
-    data () {
-      return {
-        dialog: false,
-      }
-    },
+        data () {
+            return {
+                dialog: false,
+            }
+        }
   }
 </script>

@@ -2684,7 +2684,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   computed: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('blogStore', ['blog_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('instagramStore', ['instagram_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('servicesStore', ['services'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('testsStore', ['tests'])),
   methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('blogStore', ['getBlogPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('instagramStore', ['getInstagramPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('servicesStore', ['getServices'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('testsStore', ['getAllTests'])), {}, {
     triggerCTA: function triggerCTA() {
-      var whatsappMessage = "¡Hola Samuel!";
+      var whatsappMessage = "Hola Samuel. Estoy interesad@ en tus servicios. ¿Podemos agendar una cita?";
       window.open("https://api.whatsapp.com/send?phone=573006205507&text=".concat(whatsappMessage));
     }
   })
@@ -39571,7 +39571,7 @@ var render = function() {
                     _c("div", { staticClass: "icon" }, [
                       _c("img", {
                         attrs: {
-                          src: "/images/icons/undraw_celebration_0jvk.svg",
+                          src: _vm.service.icon,
                           alt: "icon",
                           width: "100"
                         }

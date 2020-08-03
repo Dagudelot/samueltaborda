@@ -455,8 +455,8 @@ iframe{
 
     #services{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         gap: 4em;
 
         .service{
@@ -704,6 +704,16 @@ iframe{
 
     #twitter-timeline{
         margin: 0;
+    }
+
+    #services_section{
+    
+        #services{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 4em;
+        }
     }
 }
 
