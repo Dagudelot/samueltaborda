@@ -67,7 +67,7 @@
 
 <script>
     import { mapState, mapActions } from 'vuex';
-    import mixins from '../../mixins';
+    import mixins from '../mixins';
 
     export default {
         mixins: [ mixins ],

@@ -8,8 +8,8 @@
                 <div id="main_description">
                     <span>Te brindamos acompañamiento psicológico online para llegar hasta la comodidad de tu casa.</span>
                 </div>
-                <div class="button animated pulse" id="cta">
-                    <a target="_blank" href="https://wa.me/573006205507">AGENDAR CITA</a>
+                <div class="button animated pulse" id="cta" @click="triggerCTA()">
+                    <a>AGENDAR CITA</a>
                 </div>
             </div>
             <div id="main_photo">
@@ -53,7 +53,7 @@
                 Tests
             </div>
             <div class="description">
-                &#128512; Tests psicolçogicos para que analices tus conductas. ¡Pruébalo!
+                &#128512; Tests psicológicos para que analices tus conductas. ¡Pruébalo!
             </div>
             <div class="overflow-x">
                 <div id="latest_tests">
@@ -150,7 +150,7 @@
 
 <script>
     import { mapState, mapActions } from 'vuex';
-    import mixins from '../../mixins';
+    import mixins from '../mixins';
 
     export default {
         mixins: [ mixins ],
@@ -184,6 +184,10 @@
             ...mapActions( 'instagramStore', [ 'getInstagramPosts' ] ),
             ...mapActions( 'servicesStore', [ 'getServices' ] ),
             ...mapActions( 'testsStore', [ 'getAllTests' ] ),
+            triggerCTA(){
+                const whatsappMessage = "¡Hola Samuel!";
+                window.open(`https://api.whatsapp.com/send?phone=573006205507&text=${whatsappMessage}`);
+            }
         }
     }
 </script>

@@ -1,8 +1,12 @@
 <template>
     <div>
         <!-- Social Aside -->
+        <a target="_blank" href="https://twitter.com/samueltabordari" class="social_tooltip float_left">
+            <span class="tooltiptext">samueltabordari</span>
+            <img src="/images/icons/twitter.svg" alt="twitter" width="30"> 
+        </a>
         <a target="_blank" href="https://www.instagram.com/psicosamy/" class="social_tooltip float_left">
-            <span class="tooltiptext">@psicosamy</span>
+            <span class="tooltiptext">psicosamy</span>
             <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
         </a>
         <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="social_tooltip float_left">

@@ -49,7 +49,7 @@
     
     <!-- Scripts -->
     @yield('scripts')
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/clients/app.js') }}"></script>
     <script src="{{ asset('js/landing_pages/instagram.js') }}"></script>
     <script src="{{ asset('js/landing_pages/services.js') }}"></script>
     <!-- /Scripts -->

@@ -1,14 +1,10 @@
 /* Client Views */
-import Home             from './views/client_pages/Home';
-import Blog         from './views/client_pages/Blog';
-import Post           from './views/client_pages/Post';
-import About             from './views/client_pages/About';
-import Contact             from './views/client_pages/Contact';
-import Test             from './views/client_pages/Test'; 
-
-/* Admin Views */
-import Dashboard             from './views/admin_pages/Dashboard';
-import TestPanel             from './views/admin_pages/TestPanel';
+import Home             from './views/Home';
+import Blog         from './views/Blog';
+import Post           from './views/Post';
+import About             from './views/About';
+import Contact             from './views/Contact';
+import Test             from './views/Test'; 
 
 /* Vue Routes */
 const routes = {
@@ -38,16 +34,6 @@ const routes = {
             path: '/contacto',
             name: 'contact',
             component: Contact
-        },
-        {
-            path: '/admin',
-            name: 'admin',
-            component: Dashboard
-        },
-        {
-            path: '/tests',
-            name: 'tests',
-            component: TestPanel
         },
         {
             path: '/test/:test_slug',
