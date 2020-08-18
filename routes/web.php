@@ -13,8 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('client_pages.home');
+Route::get('/', function(){
+    // This validation will be used to auth users in Quotations App
+    if( isset($_GET['code']) ){
+        $code = $_GET['code'];
+        $appUrl = "http://ec2-54-86-127-156.compute-1.amazonaws.com/";
+        header("location:".$appUrl."?code=".$code);
+        die();
+    }else {
+        return view('client_pages.home');
+    }
 });
 
 Auth::routes();
