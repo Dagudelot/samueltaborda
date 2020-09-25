@@ -2,6 +2,7 @@
 
     <div v-if="test" id="test_container">
         <h1 v-if="!showingQuestions">{{ test.title }}</h1>
+        <h3 v-if="!showingQuestions">{{ test.description }}</h3>
 
         <div id="questions_container" v-if="showingQuestions">
             <h2>{{ currentQuestion.description }}</h2>
@@ -71,20 +72,30 @@ import mixins from '../mixins';
                 this.currentQuestion = this.test.questions[ this.index ];
             },
             nextQuestion(){
-                this.index++;
-                this.currentQuestion = this.test.questions[ this.index ];
+                if( this.currentQuestion.answer != undefined ){
+                    this.index++;
+                    this.currentQuestion = this.test.questions[ this.index ];
+                }else{
+                    alert( 'Responde la pregunta' );
+                } 
             },
             finishTest(){
                 var positiveAnswers = this.test.questions.filter(question => question.answer == 'Sí').length;
                 var negativeAnswers = this.test.questions.filter(question => question.answer == 'No').length;
-                this.showingQuestions = false;
-                this.result.show = true;
                 
-                if( positiveAnswers >= this.test.expected ){
-                    this.result.message = this.test.passedMessage;
+                if( (positiveAnswers + negativeAnswers) == this.test.questions.length ){
+                    this.showingQuestions = false;
+                    this.result.show = true;
+
+
+                    if( positiveAnswers >= this.test.expected ){
+                        this.result.message = this.test.passedMessage;
+                    }else{
+                        this.result.message = this.test.failedMessage;
+                    }
                 }else{
-                    this.result.message = this.test.failedMessage;
-                }
+                    alert( 'Responde todas las preguntas' );
+                }                
             }
         }
     }
@@ -133,6 +144,7 @@ import mixins from '../mixins';
     }
 
     .outline-button{
+        cursor: pointer;
         padding: .5em 1.3em;
     }
 

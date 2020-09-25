@@ -1,16 +1,16 @@
 // Import stores
+import testsStore from './stores/testsStore'
 
 // Main Store
 const store = {
-    state: {   
-        
+    state: {        
     },
-    mutations: {
-        
+    mutations: {        
     },
     actions: {
     },
     modules: {
+        testsStore
     }
 };
 

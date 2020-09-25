@@ -97496,13 +97496,44 @@ var routes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _stores_testsStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./stores/testsStore */ "./resources/js/vue/admins/stores/testsStore.js");
 // Import stores
-// Main Store
+ // Main Store
+
 var store = {
   state: {},
   mutations: {},
   actions: {},
-  modules: {}
+  modules: {
+    testsStore: _stores_testsStore__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+
+/***/ "./resources/js/vue/admins/stores/testsStore.js":
+/*!******************************************************!*\
+  !*** ./resources/js/vue/admins/stores/testsStore.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var store = {
+  namespaced: true,
+  state: {},
+  mutations: {},
+  actions: {
+    saveTest: function saveTest(state, data) {
+      console.log(data);
+      return axios.post('/test/save', data);
+    }
+  }
 };
 /* harmony default export */ __webpack_exports__["default"] = (store);
 

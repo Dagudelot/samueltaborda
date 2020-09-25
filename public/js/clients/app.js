@@ -2838,6 +2838,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2874,8 +2875,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.currentQuestion = this.test.questions[this.index];
     },
     nextQuestion: function nextQuestion() {
-      this.index++;
-      this.currentQuestion = this.test.questions[this.index];
+      if (this.currentQuestion.answer != undefined) {
+        this.index++;
+        this.currentQuestion = this.test.questions[this.index];
+      } else {
+        alert('Responde la pregunta');
+      }
     },
     finishTest: function finishTest() {
       var positiveAnswers = this.test.questions.filter(function (question) {
@@ -2884,13 +2889,18 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var negativeAnswers = this.test.questions.filter(function (question) {
         return question.answer == 'No';
       }).length;
-      this.showingQuestions = false;
-      this.result.show = true;
 
-      if (positiveAnswers >= this.test.expected) {
-        this.result.message = this.test.passedMessage;
+      if (positiveAnswers + negativeAnswers == this.test.questions.length) {
+        this.showingQuestions = false;
+        this.result.show = true;
+
+        if (positiveAnswers >= this.test.expected) {
+          this.result.message = this.test.passedMessage;
+        } else {
+          this.result.message = this.test.failedMessage;
+        }
       } else {
-        this.result.message = this.test.failedMessage;
+        alert('Responde todas las preguntas');
       }
     }
   })
@@ -7453,7 +7463,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.hidden[data-v-a927607e]{\n    visibility: hidden;\n}\nh1[data-v-a927607e]{\n    text-align: center;\n    margin-top: 2em;\n}\n#test_container[data-v-a927607e]{\n    width: 100vw;\n    height: 80vh;\n    padding: 10em 0;\n    text-align: center;\n}\n#questions_container[data-v-a927607e]{\n    margin-bottom: 10em;\n}\n#questions_container h2[data-v-a927607e]{\n    transition: 2s;\n}\n.select[data-v-a927607e]{\n    width: 80vw;\n    margin: auto;\n}\n#footer[data-v-a927607e]{\n    display: none;\n}\n#buttons[data-v-a927607e]{\n    display: flex;\n    justify-content: space-between;\n    width: 90vw;\n    margin: auto;\n}\n.outline-button[data-v-a927607e]{\n    padding: .5em 1.3em;\n}\n#finish_button[data-v-a927607e]{\n    background: #22D1EE;\n}\n#result[data-v-a927607e]{\n    text-align: center;\n    margin-top: 8em;\n}\n\n", ""]);
+exports.push([module.i, "\n.hidden[data-v-a927607e]{\n    visibility: hidden;\n}\nh1[data-v-a927607e]{\n    text-align: center;\n    margin-top: 2em;\n}\n#test_container[data-v-a927607e]{\n    width: 100vw;\n    height: 80vh;\n    padding: 10em 0;\n    text-align: center;\n}\n#questions_container[data-v-a927607e]{\n    margin-bottom: 10em;\n}\n#questions_container h2[data-v-a927607e]{\n    transition: 2s;\n}\n.select[data-v-a927607e]{\n    width: 80vw;\n    margin: auto;\n}\n#footer[data-v-a927607e]{\n    display: none;\n}\n#buttons[data-v-a927607e]{\n    display: flex;\n    justify-content: space-between;\n    width: 90vw;\n    margin: auto;\n}\n.outline-button[data-v-a927607e]{\n    cursor: pointer;\n    padding: .5em 1.3em;\n}\n#finish_button[data-v-a927607e]{\n    background: #22D1EE;\n}\n#result[data-v-a927607e]{\n    text-align: center;\n    margin-top: 8em;\n}\n\n", ""]);
 
 // exports
 
@@ -40560,6 +40570,10 @@ var render = function() {
     ? _c("div", { attrs: { id: "test_container" } }, [
         !_vm.showingQuestions
           ? _c("h1", [_vm._v(_vm._s(_vm.test.title))])
+          : _vm._e(),
+        _vm._v(" "),
+        !_vm.showingQuestions
+          ? _c("h3", [_vm._v(_vm._s(_vm.test.description))])
           : _vm._e(),
         _vm._v(" "),
         _vm.showingQuestions
