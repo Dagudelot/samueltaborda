@@ -32,7 +32,8 @@
                     </div>
                     <div class="nav_item">
                         <img src="/images/icons/contact.svg" alt="home" width="20">
-                        <router-link :to="{ name : 'contact' }" class="animated">Contacto</router-link>
+                        <a @click="triggerCTA" class="animated">Contacto</a>
+                        <!--<router-link :to="{ name : 'contact' }" class="animated">Contacto</router-link>-->
                     </div>
                     <div class="nav_item">
                         <img src="/images/icons/blog.svg" alt="home" width="20">
@@ -77,8 +78,16 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+    import mixins from '../../mixins';
+
     export default {
+        mixins: [ mixins ],
         mounted(){
+            this.getSettings();
+        },
+        methods: {
+            ...mapActions([ 'getSettings' ])
         }
     }
 </script>

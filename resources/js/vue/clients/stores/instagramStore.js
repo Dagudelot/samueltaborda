@@ -1,7 +1,11 @@
+import mixins from '../mixins';
+
 export default {
     namespaced: true,
     state: {
-        instagram_posts: []
+        instagram_posts: [],
+        api_key: null,
+        api_host: null
     },
     getters: {
     },
@@ -11,36 +15,25 @@ export default {
         }
     },
     actions: {
-        getInstagramPosts( state ) {
+        getInstagramPosts( state, settings ) {
 
-            var posts = [];
+            const host = mixins.methods.getSettingByName( settings, "x_rapidapi_host" );
+            const key = mixins.methods.getSettingByName( settings, "x_rapidapi_key" );
+            const instagram_user_id = mixins.methods.getSettingByName( settings, "instagram_user_id" );
+            const max_instagram_posts = mixins.methods.getSettingByName( settings, "max_instagram_posts" );
 
-            fetch("https://www.instagram.com/psicosamy/?__a=1", {
-                "method": "GET"
+            fetch(`https://${host}/account-medias?userid=${instagram_user_id}&first=${max_instagram_posts}`, {
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-key": key,
+                    "x-rapidapi-host": host
+                }
             })
             .then(response => response.json())
             .then(res => {
 
-                var ig_posts = res.graphql.user.edge_owner_to_timeline_media.edges.filter(post => post.node.__typename == "GraphImage");
-                
-                ig_posts.forEach(post => {
-                    
-                    var image = post.node.display_url;
-                    var captions = post.node.edge_media_to_caption.edges;
-                    var caption = (captions.length > 0) ? post.node.edge_media_to_caption.edges[0].node.text : '';
-                    var shortcode = post.node.shortcode;
-                    var timestamp = post.node.taken_at_timestamp;
-
-                    posts.push({ 
-                        attachments: {
-                            'link' : image
-                        }, 
-                        'text' : caption, 
-                        'link' : `https://www.instagram.com/p/${shortcode}`, 
-                        timestamp 
-                    });
-                });
-
+                var ig_posts = res.edges.filter(x => !x.node.is_video);
+                const posts = mixins.methods.formatInstagramPosts( ig_posts );               
                 localStorage.setItem('instagramPosts', JSON.stringify( posts ));
                 state.commit('SET_INSTAGRAM_POSTS', posts);
             })

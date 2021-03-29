@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div v-if="settings">
         <!-- Welcome Container -->
         <div class="contenedor section" id="welcome_section">
             <div id="main_title_container">
-                <h1>Samuel Taborda</h1>
-                <h2 id="subtitle">Psicólogo Cognitivo Conductual</h2>
+                <h1>{{ getSettingByName( settings, 'web_name' ) }}</h1>
+                <h2 id="subtitle">{{ getSettingByName( settings, 'profession' ) }}</h2>
                 <div id="main_description">
-                    <span>Te brindamos acompañamiento psicológico online para llegar hasta la comodidad de tu casa.</span>
+                    <span>{{ getSettingByName( settings, 'slogan' ) }}</span>
                 </div>
                 <div class="button animated pulse" id="cta" @click="triggerCTA()">
                     <a>AGENDAR CITA</a>
@@ -83,7 +83,7 @@
                 Instagram
             </div>
             <div class="description">
-                &#128512; Me puedes seguir en <a target="_blank" href="https://instagram.com/psicosamy">@psicosamy</a>, donde estoy siempre activo publicando mucho contenido de tu interés.
+                &#128512; Me puedes seguir en <a target="_blank" :href="`https://instagram.com/${getSettingByName( settings,'instagram_username')}`">@{{getSettingByName( settings,'instagram_username')}}</a>, donde estoy siempre activo publicando mucho contenido de tu interés.
             </div>
             <div class="overflow-x">
                 <div id="instagram_posts">
@@ -104,10 +104,10 @@
                 Twitter
             </div>
             <div class="description">
-                &#128512; Me puedes seguir en <a target="_blank" href="https://twitter.com/samueltabordari">@psicosamy</a>, donde estoy siempre activo publicando mucho contenido de tu interés.
+                &#128512; Me puedes seguir en <a target="_blank" :href="`https://twitter.com/${getSettingByName( settings,'twitter_username')}`">@{{ getSettingByName( settings,'twitter_username') }}</a>, donde estoy siempre activo publicando mucho contenido de tu interés.
             </div>
             <div id="twitter-timeline">
-                <a class="twitter-timeline" data-height="1000" data-theme="dark" href="https://twitter.com/samueltabordari?ref_src=twsrc%5Etfw">Tweets de Samuel Taborda</a>
+                <a class="twitter-timeline" data-height="1000" data-theme="dark" :href="`https://twitter.com/${getSettingByName( settings,'twitter_username')}?ref_src=twsrc%5Etfw`">Tweets de {{ getSettingByName( settings,'web_name') }}</a>
             </div>
         </div>
         <!-- /Latest Posts (Twitter) Container -->
@@ -137,9 +137,9 @@
                 Ubicación
             </div>
             <div class="big_description">
-                Tel: 230-90-88
+                Tel: {{ getSettingByName( settings,'telephone') }}
                 <div class="description">
-                    Carrera 76 #49-11, Medellín, Colombia
+                    {{ getSettingByName( settings,'address') }}
                 </div>
             </div>
             <location></location>
@@ -154,26 +154,13 @@
 
     export default {
         mixins: [ mixins ],
-        mounted(){
-
-            this.getBlogPosts({
-                url: '/studio/api/posts/',
-                limit: 6
-            });
-            this.getInstagramPosts();
-            this.getServices();
-            this.getAllTests();
-
-            setTimeout(() => {
-                this.filteredInstagramPosts = this.filterPosts( this.instagram_posts, '#psicosamy' );
-            }, 3000);
-        },
         data(){
             return {
                 filteredInstagramPosts : []
             }
         },
         computed: {
+            ...mapState([ 'settings' ]),
             ...mapState( 'blogStore', [ 'blog_posts' ] ),
             ...mapState( 'instagramStore', [ 'instagram_posts' ] ),
             ...mapState( 'servicesStore', [ 'services' ] ),
@@ -183,10 +170,21 @@
             ...mapActions( 'blogStore', [ 'getBlogPosts' ] ),
             ...mapActions( 'instagramStore', [ 'getInstagramPosts' ] ),
             ...mapActions( 'servicesStore', [ 'getServices' ] ),
-            ...mapActions( 'testsStore', [ 'getAllTests' ] ),
-            triggerCTA(){
-                const whatsappMessage = "Hola Samuel. Estoy interesad@ en tus servicios. ¿Podemos agendar una cita?";
-                window.open(`https://api.whatsapp.com/send?phone=573006205507&text=${whatsappMessage}`);
+            ...mapActions( 'testsStore', [ 'getAllTests' ] )            
+        },
+        watch: {
+            settings: function( settings ){
+                this.getBlogPosts({
+                    url: '/studio/api/posts/',
+                    limit: 6
+                });
+                this.getServices();
+                this.getAllTests();
+                this.getInstagramPosts( settings );
+                
+                setTimeout(() => {
+                    this.filteredInstagramPosts = this.filterPosts( this.instagram_posts, `#${this.getSettingByName( settings, 'instagram_filter_tag' )}` );
+                }, 3000);
             }
         }
     }

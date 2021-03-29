@@ -2102,6 +2102,45 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../mixins */ "./resources/js/vue/clients/mixins.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])(['settings']))
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/vue/clients/components/RelatedPost.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/vue/clients/components/RelatedPost.vue?vue&type=script&lang=js& ***!
@@ -2248,6 +2287,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins */ "./resources/js/vue/clients/mixins.js");
 //
 //
 //
@@ -2259,30 +2299,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mixins: [_mixins__WEBPACK_IMPORTED_MODULE_0__["default"]]
+});
 
 /***/ }),
 
@@ -2662,32 +2682,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mixins: [_mixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
-  mounted: function mounted() {
-    var _this = this;
-
-    this.getBlogPosts({
-      url: '/studio/api/posts/',
-      limit: 6
-    });
-    this.getInstagramPosts();
-    this.getServices();
-    this.getAllTests();
-    setTimeout(function () {
-      _this.filteredInstagramPosts = _this.filterPosts(_this.instagram_posts, '#psicosamy');
-    }, 3000);
-  },
   data: function data() {
     return {
       filteredInstagramPosts: []
     };
   },
-  computed: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('blogStore', ['blog_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('instagramStore', ['instagram_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('servicesStore', ['services'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('testsStore', ['tests'])),
-  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('blogStore', ['getBlogPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('instagramStore', ['getInstagramPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('servicesStore', ['getServices'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('testsStore', ['getAllTests'])), {}, {
-    triggerCTA: function triggerCTA() {
-      var whatsappMessage = "Hola Samuel. Estoy interesad@ en tus servicios. ¿Podemos agendar una cita?";
-      window.open("https://api.whatsapp.com/send?phone=573006205507&text=".concat(whatsappMessage));
+  computed: _objectSpread(_objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])(['settings'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('blogStore', ['blog_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('instagramStore', ['instagram_posts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('servicesStore', ['services'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])('testsStore', ['tests'])),
+  methods: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('blogStore', ['getBlogPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('instagramStore', ['getInstagramPosts'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('servicesStore', ['getServices'])), Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])('testsStore', ['getAllTests'])),
+  watch: {
+    settings: function settings(_settings) {
+      var _this = this;
+
+      this.getBlogPosts({
+        url: '/studio/api/posts/',
+        limit: 6
+      });
+      this.getServices();
+      this.getAllTests();
+      this.getInstagramPosts(_settings);
+      setTimeout(function () {
+        _this.filteredInstagramPosts = _this.filterPosts(_this.instagram_posts, "#".concat(_this.getSettingByName(_settings, 'instagram_filter_tag')));
+      }, 3000);
     }
-  })
+  }
 });
 
 /***/ }),
@@ -2917,6 +2934,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _mixins__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../mixins */ "./resources/js/vue/clients/mixins.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2995,8 +3020,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {}
+  mixins: [_mixins__WEBPACK_IMPORTED_MODULE_1__["default"]],
+  mounted: function mounted() {
+    this.getSettings();
+  },
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapActions"])(['getSettings']))
 });
 
 /***/ }),
@@ -39495,19 +39527,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("iframe", {
-    staticStyle: { border: "0" },
-    attrs: {
-      src:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.032814767059!2d-75.59421128467447!3d6.259407927912285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44290dff5a6635%3A0xee9e21f421a0a59a!2sCra.%2076%20%2349-11%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1589484615657!5m2!1ses!2sco",
-      width: "600",
-      height: "450",
-      frameborder: "0",
-      allowfullscreen: "",
-      "aria-hidden": "false",
-      tabindex: "0"
-    }
-  })
+  return _vm.settings
+    ? _c("iframe", {
+        staticStyle: { border: "0" },
+        attrs: {
+          src: _vm.getSettingByName(_vm.settings, "map_src"),
+          width: "600",
+          height: "450",
+          frameborder: "0",
+          allowfullscreen: "true",
+          "aria-hidden": "false",
+          tabindex: "0"
+        }
+      })
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39825,55 +39858,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "section container" }, [
-      _c("h1", [_vm._v("Acerca de mí...")]),
+  return _c("div", { staticClass: "section container" }, [
+    _c("h1", [_vm._v("Acerca de mí...")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "description" }, [
+      _vm._v(
+        "\n        PRESENTACIÓN " +
+          _vm._s(_vm.getSettingByName(_vm.settings, "profession")) +
+          " " +
+          _vm._s(_vm.getSettingByName(_vm.settings, "web_name")) +
+          " "
+      ),
+      _c("br"),
+      _c("br"),
       _vm._v(" "),
-      _c("div", { staticClass: "description" }, [
-        _vm._v("\n        PRESENTACION PSICOLOGO SAMUEL ALBERTO TABORDA RIOS "),
-        _c("br"),
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { attrs: { id: "about_text" } }, [
-          _vm._v(
-            "\n            Psicólogo clínico por la universidad por la universidad Antonio Nariño, con formación en psicología infantil y juvenil, terapia del niño y la escuela, terapia de pareja de la universidad pontificia Bolivariana, donde tuve la oportunidad de prestar mis servicios como practicante de psicología en el colegio de la UPB, primaria y bachillerato, y posteriormente pase al centro de atención psicológica donde trabaje desde el año 2002 al 2010, cuando decidí retirarme para continuar en mi consultorio en el sector del poblado y laureles. Durante esta época en el centro de atención tuve la oportunidad de atender al año entre 1450 y 1500 consultas clínicas con resultados muy positivos, así mismo estuve al frente de la atención en la emergencia del 2007 cuando una avioneta cayó en las instalaciones de la universidad con consecuencias psicológicas de ansiedad pánico y temor en estudiantes y empleados de la UPB.\n\n            "
-          ),
-          _c("br"),
-          _c("br"),
-          _vm._v(
-            "\n            \n            Desde el año 2004 tuve la oportunidad de realizar programas de radio en la emisora de la universidad los cuales todavía realizo en directo con una periocidad de un programa mensual, y este espacio me permitió hacer mi primer programa en Telemedellín, Teleantioquia, y Cosmovisión, donde posteriormente tuve la oportunidad de estar en muchos programas en vivo, (Capicúa, las tres gracias, el diario de Diana Muy femenino, videos que hoy puedes observar en YouTube.\n\n            "
-          ),
-          _c("br"),
-          _c("br"),
-          _vm._v(
-            "\n\n            También alterné mi servicio psicológico en la fundación multiimpedidos desde 2003 al 2009, donde atendía las familias de niños con múltiples discapacidades, manejando especialmente la negación y sobreprotección de un padre con un hijo con alguna discapacidad.\n            Durante el tiempo que permanecí en la Fundación Multis, nombre actual, tuve la oportunidad de estar en un proyecto con la cuarta brigada atendiendo personal caído en batalla, donde el objetivo principal era RESIGNIFICAR SU PROYECTO DE VIDA y duelo por la pérdida de algún miembro de su cuerpo, atendí soldados con pérdida de miembros inferiores, superiores y muchos que por alguna razón perdieron su visión o la audición.\n\n            "
-          ),
-          _c("br"),
-          _c("br"),
-          _vm._v(
-            "\n\n            Me desempeñe por espacio de 4 años como psicólogo asesor de la Arquidiócesis realizando los cursillos prematrimoniales a muchas parejas en la iglesia Nuestra Señora de Belén, en  el parque de Belén en la ciudad de Medellín.\n\n            "
-          ),
-          _c("br"),
-          _c("br"),
-          _vm._v(
-            "\n\n            Desde el año 2010 llegue como conferencista en una escuela de padres al colegio Santa Bertilla Boscardín en el sector de Robledo, donde por intermedio de su rectora tuve la oportunidad de atender clínica a los estudiantes y familiares, así mismo estuve a cargo de la escuela de padres de familia con charlas mensuales y así por espacio de 10 años, cuando me voy a otra institución cercana llamada CORPORACION GUILLERMO TABORDA RESTREPO, donde actualmente apoyo en el área psicológica y de acompañamiento en escuela de padres.\n\n            "
-          ),
-          _c("br"),
-          _c("br"),
-          _vm._v(
-            "\n\n            Desde el año 2016 pertenezco a la junta nacional de alcohólicos anónimos como custodio clase A (sin la enfermedad) apoyando la junta nacional y sirviendo de imagen en los medios de comunicación. También desde el año 2006 vengo prestando mi servicio clínico particular en un consultorio ubicado en el sector del estadio con un equipo interdisciplinario donde cuento con el apoyo de psiquiatras, psicólogos, neuropsicólogos, fonoaudiólogos, médicos.\n        "
-          )
-        ])
-      ])
+      _c("div", {
+        attrs: { id: "about_text" },
+        domProps: {
+          innerHTML: _vm._s(_vm.getSettingByName(_vm.settings, "about"))
+        }
+      })
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -40103,182 +40111,282 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "contenedor section", attrs: { id: "welcome_section" } },
-      [
-        _c("div", { attrs: { id: "main_title_container" } }, [
-          _c("h1", [_vm._v("Samuel Taborda")]),
-          _vm._v(" "),
-          _c("h2", { attrs: { id: "subtitle" } }, [
-            _vm._v("Psicólogo Cognitivo Conductual")
-          ]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "button animated pulse",
-              attrs: { id: "cta" },
-              on: {
-                click: function($event) {
-                  return _vm.triggerCTA()
-                }
-              }
-            },
-            [_c("a", [_vm._v("AGENDAR CITA")])]
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(1)
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "contenedor section",
-        attrs: { id: "latest_posts_section" }
-      },
-      [
-        _c("div", { staticClass: "section_title" }, [
-          _vm._v("\n            Últimas publicaciones\n        ")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "description" }, [
-          _vm._v(
-            "\n            😀 En mi blog, estoy siempre activo publicando sobre diferentes temas de interés y actualidad. ¡Léelo!\n        "
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "overflow-x" }, [
-          _c(
-            "div",
-            { attrs: { id: "latest_posts" } },
-            _vm._l(_vm.blog_posts, function(post, index) {
-              return _c(
+  return _vm.settings
+    ? _c("div", [
+        _c(
+          "div",
+          {
+            staticClass: "contenedor section",
+            attrs: { id: "welcome_section" }
+          },
+          [
+            _c("div", { attrs: { id: "main_title_container" } }, [
+              _c("h1", [
+                _vm._v(_vm._s(_vm.getSettingByName(_vm.settings, "web_name")))
+              ]),
+              _vm._v(" "),
+              _c("h2", { attrs: { id: "subtitle" } }, [
+                _vm._v(_vm._s(_vm.getSettingByName(_vm.settings, "profession")))
+              ]),
+              _vm._v(" "),
+              _c("div", { attrs: { id: "main_description" } }, [
+                _c("span", [
+                  _vm._v(_vm._s(_vm.getSettingByName(_vm.settings, "slogan")))
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
                 "div",
-                { key: index, staticClass: "review_posts" },
-                [_c("blog-post-card", { attrs: { post: post } })],
+                {
+                  staticClass: "button animated pulse",
+                  attrs: { id: "cta" },
+                  on: {
+                    click: function($event) {
+                      return _vm.triggerCTA()
+                    }
+                  }
+                },
+                [_c("a", [_vm._v("AGENDAR CITA")])]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "contenedor section",
+            attrs: { id: "latest_posts_section" }
+          },
+          [
+            _c("div", { staticClass: "section_title" }, [
+              _vm._v("\n            Últimas publicaciones\n        ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "description" }, [
+              _vm._v(
+                "\n            😀 En mi blog, estoy siempre activo publicando sobre diferentes temas de interés y actualidad. ¡Léelo!\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "overflow-x" }, [
+              _c(
+                "div",
+                { attrs: { id: "latest_posts" } },
+                _vm._l(_vm.blog_posts, function(post, index) {
+                  return _c(
+                    "div",
+                    { key: index, staticClass: "review_posts" },
+                    [_c("blog-post-card", { attrs: { post: post } })],
+                    1
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("router-link", { attrs: { to: { name: "blog" } } }, [
+              _c("div", { staticClass: "button outline-button" }, [
+                _vm._v("\n                Ver más 👉\n            ")
+              ])
+            ])
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _vm.tests.length > 0
+          ? _c("div", { staticClass: "contenedor section" }, [
+              _c("div", { staticClass: "section_title" }, [
+                _vm._v("\n            Tests\n        ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "description" }, [
+                _vm._v(
+                  "\n            😀 Tests psicológicos para que analices tus conductas. ¡Pruébalo!\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "overflow-x" }, [
+                _c(
+                  "div",
+                  { attrs: { id: "latest_tests" } },
+                  _vm._l(_vm.tests, function(test, index) {
+                    return _c(
+                      "div",
+                      { key: index },
+                      [_c("test-card", { attrs: { test: test } })],
+                      1
+                    )
+                  }),
+                  0
+                )
+              ])
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "contenedor section",
+            attrs: { id: "instagram_posts_section" }
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c("div", { staticClass: "description" }, [
+              _vm._v("\n            😀 Me puedes seguir en "),
+              _c(
+                "a",
+                {
+                  attrs: {
+                    target: "_blank",
+                    href:
+                      "https://instagram.com/" +
+                      _vm.getSettingByName(_vm.settings, "instagram_username")
+                  }
+                },
+                [
+                  _vm._v(
+                    "@" +
+                      _vm._s(
+                        _vm.getSettingByName(_vm.settings, "instagram_username")
+                      )
+                  )
+                ]
+              ),
+              _vm._v(
+                ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "overflow-x" }, [
+              _c(
+                "div",
+                { attrs: { id: "instagram_posts" } },
+                _vm._l(_vm.filteredInstagramPosts, function(post, index) {
+                  return _c("instagram-post-card", {
+                    key: index,
+                    attrs: { post: post }
+                  })
+                }),
                 1
               )
-            }),
-            0
-          )
-        ]),
+            ])
+          ]
+        ),
         _vm._v(" "),
-        _c("router-link", { attrs: { to: { name: "blog" } } }, [
-          _c("div", { staticClass: "button outline-button" }, [
-            _vm._v("\n                Ver más 👉\n            ")
-          ])
-        ])
-      ],
-      1
-    ),
-    _vm._v(" "),
-    _vm.tests.length > 0
-      ? _c("div", { staticClass: "contenedor section" }, [
-          _c("div", { staticClass: "section_title" }, [
-            _vm._v("\n            Tests\n        ")
-          ]),
+        _c("div", { staticClass: "contenedor section" }, [
+          _vm._m(2),
           _vm._v(" "),
           _c("div", { staticClass: "description" }, [
+            _vm._v("\n            😀 Me puedes seguir en "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  target: "_blank",
+                  href:
+                    "https://twitter.com/" +
+                    _vm.getSettingByName(_vm.settings, "twitter_username")
+                }
+              },
+              [
+                _vm._v(
+                  "@" +
+                    _vm._s(
+                      _vm.getSettingByName(_vm.settings, "twitter_username")
+                    )
+                )
+              ]
+            ),
             _vm._v(
-              "\n            😀 Tests psicológicos para que analices tus conductas. ¡Pruébalo!\n        "
+              ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "overflow-x" }, [
+          _c("div", { attrs: { id: "twitter-timeline" } }, [
             _c(
-              "div",
-              { attrs: { id: "latest_tests" } },
-              _vm._l(_vm.tests, function(test, index) {
-                return _c(
-                  "div",
-                  { key: index },
-                  [_c("test-card", { attrs: { test: test } })],
-                  1
+              "a",
+              {
+                staticClass: "twitter-timeline",
+                attrs: {
+                  "data-height": "1000",
+                  "data-theme": "dark",
+                  href:
+                    "https://twitter.com/" +
+                    _vm.getSettingByName(_vm.settings, "twitter_username") +
+                    "?ref_src=twsrc%5Etfw"
+                }
+              },
+              [
+                _vm._v(
+                  "Tweets de " +
+                    _vm._s(_vm.getSettingByName(_vm.settings, "web_name"))
                 )
-              }),
-              0
+              ]
             )
           ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "contenedor section",
-        attrs: { id: "instagram_posts_section" }
-      },
-      [
-        _vm._m(2),
+        ]),
         _vm._v(" "),
-        _vm._m(3),
+        _c(
+          "div",
+          { staticClass: "section", attrs: { id: "services_section" } },
+          [
+            _c("div", { staticClass: "section_title" }, [
+              _vm._v("\n            Servicios\n        ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "description" }, [
+              _vm._v(
+                "\n            🏸 Lista de los servicios que presto. Dale click a uno de ellos si estás interesad@ en saber más\n        "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { attrs: { id: "services" } },
+              _vm._l(_vm.services, function(service, index) {
+                return _c("service", {
+                  key: index,
+                  attrs: { service: service }
+                })
+              }),
+              1
+            )
+          ]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "overflow-x" }, [
-          _c(
-            "div",
-            { attrs: { id: "instagram_posts" } },
-            _vm._l(_vm.filteredInstagramPosts, function(post, index) {
-              return _c("instagram-post-card", {
-                key: index,
-                attrs: { post: post }
-              })
-            }),
-            1
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _vm._m(4),
-    _vm._v(" "),
-    _c("div", { staticClass: "section", attrs: { id: "services_section" } }, [
-      _c("div", { staticClass: "section_title" }, [
-        _vm._v("\n            Servicios\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "description" }, [
-        _vm._v(
-          "\n            🏸 Lista de los servicios que presto. Dale click a uno de ellos si estás interesad@ en saber más\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { attrs: { id: "services" } },
-        _vm._l(_vm.services, function(service, index) {
-          return _c("service", { key: index, attrs: { service: service } })
-        }),
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "contenedor section" },
-      [_vm._m(5), _vm._v(" "), _vm._m(6), _vm._v(" "), _c("location")],
-      1
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "main_description" } }, [
-      _c("span", [
-        _vm._v(
-          "Te brindamos acompañamiento psicológico online para llegar hasta la comodidad de tu casa."
+        _c(
+          "div",
+          { staticClass: "contenedor section" },
+          [
+            _vm._m(3),
+            _vm._v(" "),
+            _c("div", { staticClass: "big_description" }, [
+              _vm._v(
+                "\n            Tel: " +
+                  _vm._s(_vm.getSettingByName(_vm.settings, "telephone")) +
+                  "\n            "
+              ),
+              _c("div", { staticClass: "description" }, [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(_vm.getSettingByName(_vm.settings, "address")) +
+                    "\n            "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("location")
+          ],
+          1
         )
       ])
-    ])
-  },
+    : _vm._e()
+}
+var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -40308,67 +40416,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "description" }, [
-      _vm._v("\n            😀 Me puedes seguir en "),
-      _c(
-        "a",
-        {
-          attrs: { target: "_blank", href: "https://instagram.com/psicosamy" }
-        },
-        [_vm._v("@psicosamy")]
-      ),
-      _vm._v(
-        ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "contenedor section" }, [
-      _c("div", { staticClass: "section_title" }, [
-        _c("img", {
-          attrs: {
-            src: "/images/icons/twitter.svg",
-            alt: "twitter",
-            width: "30"
-          }
-        }),
-        _vm._v("\n            Twitter\n        ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "description" }, [
-        _vm._v("\n            😀 Me puedes seguir en "),
-        _c(
-          "a",
-          {
-            attrs: {
-              target: "_blank",
-              href: "https://twitter.com/samueltabordari"
-            }
-          },
-          [_vm._v("@psicosamy")]
-        ),
-        _vm._v(
-          ", donde estoy siempre activo publicando mucho contenido de tu interés.\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { attrs: { id: "twitter-timeline" } }, [
-        _c(
-          "a",
-          {
-            staticClass: "twitter-timeline",
-            attrs: {
-              "data-height": "1000",
-              "data-theme": "dark",
-              href: "https://twitter.com/samueltabordari?ref_src=twsrc%5Etfw"
-            }
-          },
-          [_vm._v("Tweets de Samuel Taborda")]
-        )
-      ])
+    return _c("div", { staticClass: "section_title" }, [
+      _c("img", {
+        attrs: { src: "/images/icons/twitter.svg", alt: "twitter", width: "30" }
+      }),
+      _vm._v("\n            Twitter\n        ")
     ])
   },
   function() {
@@ -40384,19 +40436,6 @@ var staticRenderFns = [
         }
       }),
       _vm._v("\n            Ubicación\n        ")
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "big_description" }, [
-      _vm._v("\n            Tel: 230-90-88\n            "),
-      _c("div", { staticClass: "description" }, [
-        _vm._v(
-          "\n                Carrera 76 #49-11, Medellín, Colombia\n            "
-        )
-      ])
     ])
   }
 ]
@@ -40720,29 +40759,21 @@ var render = function() {
                 1
               ),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "nav_item" },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: "/images/icons/contact.svg",
-                      alt: "home",
-                      width: "20"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "animated",
-                      attrs: { to: { name: "contact" } }
-                    },
-                    [_vm._v("Contacto")]
-                  )
-                ],
-                1
-              ),
+              _c("div", { staticClass: "nav_item" }, [
+                _c("img", {
+                  attrs: {
+                    src: "/images/icons/contact.svg",
+                    alt: "home",
+                    width: "20"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "animated", on: { click: _vm.triggerCTA } },
+                  [_vm._v("Contacto")]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -99366,15 +99397,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Map_vue_vue_type_template_id_75382bd1___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Map.vue?vue&type=template&id=75382bd1& */ "./resources/js/vue/clients/components/Map.vue?vue&type=template&id=75382bd1&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Map_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Map.vue?vue&type=script&lang=js& */ "./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Map_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Map_vue_vue_type_template_id_75382bd1___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Map_vue_vue_type_template_id_75382bd1___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -99388,6 +99421,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/vue/clients/components/Map.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Map_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Map.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/vue/clients/components/Map.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Map_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -99678,13 +99725,26 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 var mixins = {
   data: function data() {
     return {
       months_arr: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
     };
   },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapState"])(['settings'])),
   methods: {
+    triggerCTA: function triggerCTA() {
+      var whatsappMessage = "Hola Samuel. Estoy interesad@ en tus servicios. ¿Podemos agendar una cita?";
+      window.open("https://api.whatsapp.com/send?phone=".concat(this.getSettingByName(this.settings, 'whatsapp'), "&text=").concat(whatsappMessage));
+    },
     filterPosts: function filterPosts(posts, tag) {
       var limit = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 6;
       var filteredPosts = [];
@@ -99720,6 +99780,30 @@ var mixins = {
     },
     jumpToTop: function jumpToTop() {
       scroll(0, 0);
+    },
+    formatInstagramPosts: function formatInstagramPosts(ig_posts) {
+      var posts = [];
+      ig_posts.forEach(function (post) {
+        var image = post.node.display_url;
+        var captions = post.node.edge_media_to_caption.edges;
+        var caption = captions.length > 0 ? post.node.edge_media_to_caption.edges[0].node.text : '';
+        var shortcode = post.node.shortcode;
+        var timestamp = post.node.taken_at_timestamp;
+        posts.push({
+          attachments: {
+            'link': image
+          },
+          'text': caption,
+          'link': "https://www.instagram.com/p/".concat(shortcode),
+          timestamp: timestamp
+        });
+      });
+      return posts;
+    },
+    getSettingByName: function getSettingByName(settings, name) {
+      return settings.filter(function (x) {
+        return x.name == name;
+      })[0].value;
     }
   }
 };
@@ -99810,9 +99894,23 @@ __webpack_require__.r(__webpack_exports__);
  // Main Store
 
 var store = {
-  state: {},
-  mutations: {},
-  actions: {},
+  state: {
+    settings: null
+  },
+  mutations: {
+    SET_SETTINGS: function SET_SETTINGS(state, settings) {
+      state.settings = settings;
+    }
+  },
+  actions: {
+    getSettings: function getSettings(state) {
+      fetch('/settings').then(function (response) {
+        return response.json();
+      }).then(function (res) {
+        state.commit('SET_SETTINGS', res.settings);
+      })["catch"](console.log);
+    }
+  },
   modules: {
     instagramStore: _stores_instagramStore__WEBPACK_IMPORTED_MODULE_0__["default"],
     blogStore: _stores_blogStore__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -99920,10 +100018,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _mixins__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../mixins */ "./resources/js/vue/clients/mixins.js");
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   namespaced: true,
   state: {
-    instagram_posts: []
+    instagram_posts: [],
+    api_key: null,
+    api_host: null
   },
   getters: {},
   mutations: {
@@ -99932,31 +100034,24 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   actions: {
-    getInstagramPosts: function getInstagramPosts(state) {
-      var posts = [];
-      fetch("https://www.instagram.com/psicosamy/?__a=1", {
-        "method": "GET"
+    getInstagramPosts: function getInstagramPosts(state, settings) {
+      var host = _mixins__WEBPACK_IMPORTED_MODULE_0__["default"].methods.getSettingByName(settings, "x_rapidapi_host");
+      var key = _mixins__WEBPACK_IMPORTED_MODULE_0__["default"].methods.getSettingByName(settings, "x_rapidapi_key");
+      var instagram_user_id = _mixins__WEBPACK_IMPORTED_MODULE_0__["default"].methods.getSettingByName(settings, "instagram_user_id");
+      var max_instagram_posts = _mixins__WEBPACK_IMPORTED_MODULE_0__["default"].methods.getSettingByName(settings, "max_instagram_posts");
+      fetch("https://".concat(host, "/account-medias?userid=").concat(instagram_user_id, "&first=").concat(max_instagram_posts), {
+        "method": "GET",
+        "headers": {
+          "x-rapidapi-key": key,
+          "x-rapidapi-host": host
+        }
       }).then(function (response) {
         return response.json();
       }).then(function (res) {
-        var ig_posts = res.graphql.user.edge_owner_to_timeline_media.edges.filter(function (post) {
-          return post.node.__typename == "GraphImage";
+        var ig_posts = res.edges.filter(function (x) {
+          return !x.node.is_video;
         });
-        ig_posts.forEach(function (post) {
-          var image = post.node.display_url;
-          var captions = post.node.edge_media_to_caption.edges;
-          var caption = captions.length > 0 ? post.node.edge_media_to_caption.edges[0].node.text : '';
-          var shortcode = post.node.shortcode;
-          var timestamp = post.node.taken_at_timestamp;
-          posts.push({
-            attachments: {
-              'link': image
-            },
-            'text': caption,
-            'link': "https://www.instagram.com/p/".concat(shortcode),
-            timestamp: timestamp
-          });
-        });
+        var posts = _mixins__WEBPACK_IMPORTED_MODULE_0__["default"].methods.formatInstagramPosts(ig_posts);
         localStorage.setItem('instagramPosts', JSON.stringify(posts));
         state.commit('SET_INSTAGRAM_POSTS', posts);
       })["catch"](function (err) {

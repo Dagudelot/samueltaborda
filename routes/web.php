@@ -34,6 +34,8 @@ Route::prefix('test')->group(function () {
     Route::post('save', 'TestsController@save');
 });
 
+Route::get('settings', 'SettingsController@getSettings');
+
 Route::namespace('Studio')->prefix(config('studio.path'))->group(function () {
     Route::prefix('api')->group(function () {
         Route::prefix('posts')->group(function () {
