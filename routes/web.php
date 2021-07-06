@@ -17,7 +17,7 @@ Route::get('/', function(){
     // This validation will be used to auth users in Quotations App
     if( isset($_GET['code']) ){
         $code = $_GET['code'];
-        $appUrl = "https://willi.test/";
+        $appUrl = "https://ac8089e7a597.ngrok.io/";
         header("location:".$appUrl."?code=".$code);
         die();
     }else {
