@@ -17,7 +17,7 @@ Route::get('/', function(){
     // This validation will be used to auth users in Quotations App
     if( isset($_GET['code']) ){
         $code = $_GET['code'];
-        $appUrl = "http://ec2-52-86-111-0.compute-1.amazonaws.com/";
+        $appUrl = "http://ec2-174-129-166-9.compute-1.amazonaws.com/";
         header("location:".$appUrl."?code=".$code);
         die();
     }else {
