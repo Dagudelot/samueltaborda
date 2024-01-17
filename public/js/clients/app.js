@@ -39494,7 +39494,7 @@ var render = function() {
                   _vm._s(
                     _vm.post.text != null
                       ? _vm.post.text.split(" ")[0]
-                      : "#psicosamy"
+                      : "#samuelalbertotabordarios"
                   ) +
                   "\n                "
               )
@@ -40847,11 +40847,13 @@ var staticRenderFns = [
         staticClass: "social_tooltip float_left",
         attrs: {
           target: "_blank",
-          href: "https://www.instagram.com/psicosamy/"
+          href: "https://www.instagram.com/samuelalbertotabordarios/"
         }
       },
       [
-        _c("span", { staticClass: "tooltiptext" }, [_vm._v("psicosamy")]),
+        _c("span", { staticClass: "tooltiptext" }, [
+          _vm._v("samuelalbertotabordarios")
+        ]),
         _vm._v(" "),
         _c("img", {
           attrs: {
@@ -40972,12 +40974,12 @@ var staticRenderFns = [
               staticClass: "social_tooltip",
               attrs: {
                 target: "_blank",
-                href: "https://www.instagram.com/psicosamy/"
+                href: "https://www.instagram.com/samuelalbertotabordarios/"
               }
             },
             [
               _c("span", { staticClass: "tooltiptext" }, [
-                _vm._v("@psicosamy")
+                _vm._v("@samuelalbertotabordarios")
               ]),
               _vm._v(" "),
               _c("img", {
@@ -100656,9 +100658,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\SamuelTaborda\resources\js\vue\clients\app.js */"./resources/js/vue/clients/app.js");
-__webpack_require__(/*! C:\laragon\www\SamuelTaborda\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\SamuelTaborda\resources\sass\studio\app.scss */"./resources/sass/studio/app.scss");
+__webpack_require__(/*! /Users/daniel/Sites/samueltaborda/resources/js/vue/clients/app.js */"./resources/js/vue/clients/app.js");
+__webpack_require__(/*! /Users/daniel/Sites/samueltaborda/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/daniel/Sites/samueltaborda/resources/sass/studio/app.scss */"./resources/sass/studio/app.scss");
 
 
 /***/ })

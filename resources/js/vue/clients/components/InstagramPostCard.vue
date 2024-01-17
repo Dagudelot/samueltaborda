@@ -11,7 +11,7 @@
             <div class="post_card_tags">
                 <ul>
                     <li>
-                        {{ (post.text != null) ? post.text.split(' ')[0] : '#psicosamy' }}
+                        {{ (post.text != null) ? post.text.split(' ')[0] : '#samuelalbertotabordarios' }}
                     </li>
                 </ul>
             </div>

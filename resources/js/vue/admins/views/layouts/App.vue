@@ -1,8 +1,8 @@
 <template>
     <div>
         <!-- Social Aside -->
-        <a target="_blank" href="https://www.instagram.com/psicosamy/" class="social_tooltip float_left">
-            <span class="tooltiptext">@psicosamy</span>
+        <a target="_blank" href="https://www.instagram.com/samuelalbertotabordarios/" class="social_tooltip float_left">
+            <span class="tooltiptext">@samuelalbertotabordarios</span>
             <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
         </a>
         <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="social_tooltip float_left">
@@ -39,8 +39,8 @@
                     Desarrollado por <strong> <a target="_blank" href="https://wa.me/573005954214">Daniel Agudelo</a> </strong>
                 </div>
                 <div id="social">
-                    <a target="_blank" href="https://www.instagram.com/psicosamy/" class="social_tooltip">
-                        <span class="tooltiptext">@psicosamy</span>
+                    <a target="_blank" href="https://www.instagram.com/samuelalbertotabordarios/" class="social_tooltip">
+                        <span class="tooltiptext">@samuelalbertotabordarios</span>
                         <img src="/images/icons/instagram.svg" alt="instagram" width="30"> 
                     </a>
                     <a target="_blank" href="https://www.youtube.com/channel/UC_o39k-Z4LFcKJPs0s8H5wg" class="social_tooltip">

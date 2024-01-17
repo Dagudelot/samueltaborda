@@ -38980,11 +38980,13 @@ var staticRenderFns = [
         staticClass: "social_tooltip float_left",
         attrs: {
           target: "_blank",
-          href: "https://www.instagram.com/psicosamy/"
+          href: "https://www.instagram.com/samuelalbertotabordarios/"
         }
       },
       [
-        _c("span", { staticClass: "tooltiptext" }, [_vm._v("@psicosamy")]),
+        _c("span", { staticClass: "tooltiptext" }, [
+          _vm._v("@samuelalbertotabordarios")
+        ]),
         _vm._v(" "),
         _c("img", {
           attrs: {
@@ -39095,12 +39097,12 @@ var staticRenderFns = [
               staticClass: "social_tooltip",
               attrs: {
                 target: "_blank",
-                href: "https://www.instagram.com/psicosamy/"
+                href: "https://www.instagram.com/samuelalbertotabordarios/"
               }
             },
             [
               _c("span", { staticClass: "tooltiptext" }, [
-                _vm._v("@psicosamy")
+                _vm._v("@samuelalbertotabordarios")
               ]),
               _vm._v(" "),
               _c("img", {
@@ -97757,7 +97759,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\SamuelTaborda\resources\js\vue\admins\app.js */"./resources/js/vue/admins/app.js");
+module.exports = __webpack_require__(/*! /Users/daniel/Sites/samueltaborda/resources/js/vue/admins/app.js */"./resources/js/vue/admins/app.js");
 
 
 /***/ })

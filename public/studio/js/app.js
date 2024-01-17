@@ -75311,7 +75311,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\SamuelTaborda\resources\js\studio\app.js */"./resources/js/studio/app.js");
+module.exports = __webpack_require__(/*! /Users/daniel/Sites/samueltaborda/resources/js/studio/app.js */"./resources/js/studio/app.js");
 
 
 /***/ })
